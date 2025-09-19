@@ -28,17 +28,17 @@ const ExperienceSection = () => {
       technologies: ["SQL", "Database Systems", "Teaching", "Data Normalization", "Relational Modeling"]
     },
     {
-      title: "DATA ANALYST",
+      title: "BUSINESS ANALYST INTERN",
       company: "STANDARDWINGS TECHNOLOGIES PVT. LTD",
       period: "December 2023 - July 2024",
-      location: "India",
+      location: "Nashik, India",
       description: "",
       achievements: [
-        "Reduced annual fuel costs by $600K by analyzing 10K+ weekly GPS logs from 120 vehicles using SQL, Python and Excel",
-        "Defined 20+ KPIs with 3 department heads and 5 field managers to measure SLA compliance and route reliability",
-        "Built 14 Tableau and QuickSight dashboards for logistics, operations and finance teams. Presented biweekly insights to both stakeholders and non-technical teams through clear, concise PowerPoint decks"
+        "Documented client requirements by collaborating with 15+ cross-functional team members and attending client meetings",
+        "Extracted actionable insights from 20,000+ rows of patient data using MS Excel, then designed a low-code application in Mendix, leading to improved patient onboarding and streamlined appointment scheduling",
+        "Presented the Mendix app functionality to technical and non-technical stakeholders using clear MS PowerPoint decks"
       ],
-      technologies: ["SQL", "Python", "Excel", "Tableau", "QuickSight", "PowerPoint", "Data Analysis", "KPI Development"]
+      technologies: ["MS Excel", "Mendix", "MS PowerPoint", "Data Analysis", "Client Collaboration", "Low-code Development"]
     },
     {
       title: "MACHINE LEARNING & DATA ANALYSIS INTERN",
