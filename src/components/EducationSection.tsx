@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getImagePath } from "@/utils/imagePath";
 import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 
 
@@ -81,7 +82,7 @@ const EducationSection = () => {
                   {/* Train Driver Image - Bigger to fit the train box */}
                   <div className="absolute top-2 left-2 w-20 h-20 bg-blue-300 rounded border border-gray-600 overflow-hidden">
                     <img 
-                      src="/driver.png" 
+                      src={getImagePath("/driver.png")} 
                       alt="Train Driver" 
                       className="w-full h-full object-cover"
                     />

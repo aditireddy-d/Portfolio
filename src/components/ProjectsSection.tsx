@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { getImagePath } from "@/utils/imagePath";
 
 const ProjectsSection = () => {
   const projects = [
@@ -7,70 +8,70 @@ const ProjectsSection = () => {
       name: "Portfolio Allocation Model",
       description: "Developed a data-driven investment strategy comparing Buy & Hold, Momentum Trading, and the S&P 500 benchmark across 9 diversified stocks from consumer, tech, and industrial sectors. Simulated 5-year stock returns using Monte Carlo analysis and applied Mean-Variance Optimization with Pyomo to identify the optimal allocation under risk constraints.",
       skills: ["Python", "Pandas", "Financial Modeling", "Risk Management", "Matplotlib", "Monte Carlo"],
-      image: "/stocks-project.png",
+      image: getImagePath("/stocks-project.png"),
       githubUrl: "https://github.com/aditireddy-d/Investing_Stocks_Strategy"
     },
     {
       name: "Energy Consumption Forecasting",
       description: "Analyzed energy use in 5,700+ South Carolina homes to predict summer demand spikes. Built time-series linear regression models using hourly energy usage, weather data, and building metadata. Created an interactive Shiny dashboard to guide energy-saving strategies and prevent blackouts with 75-85% accuracy.",
       skills: ["R", "Shiny", "ggplot2", "Time Series", "Regression", "Energy Analytics"],
-      image: "/energy-project.png",
+      image: getImagePath("/energy-project.png"),
       githubUrl: "https://github.com/aditireddy-d/Energy-Consumption-Predictor"
     },
     {
       name: "COVID-19 Data Exploration",
       description: "Performed comprehensive data cleaning using advanced Excel techniques, followed by exploratory data analysis using SQL queries. Showcased COVID-19 trends and vaccination impact in Tableau using multiple visualizations including bar charts and interactive maps.",
       skills: ["SQL", "Tableau", "Excel", "Data Cleaning", "Data Visualization"],
-      image: "/covid-project.png",
+      image: getImagePath("/covid-project.png"),
       githubUrl: "https://github.com/aditireddy-d/Covid-19-Data-Exploration"
     },
     {
       name: "Diabetes Disease Prediction",
       description: "Trained 7 machine learning classifiers in Python (Logistic Regression, SVM, Gradient Boosting, XGBoost, Decision Tree, KNN, Random Forest) to predict diabetes based on patient health metrics. Applied one-hot encoding and MinMax normalization for data cleaning and split data into 75/25 train-test. Found Gradient Boosting most effective with 91.45% prediction accuracy and root mean squared error (RMSE) of 0.39.",
       skills: ["Python", "Machine Learning", "Scikit-learn", "XGBoost", "Gradient Boosting", "Data Preprocessing"],
-      image: "/diabetes-project.png",
+      image: getImagePath("/diabetes-project.png"),
       githubUrl: "https://github.com/aditireddy-d/Diabetes-Prediction-Python-Machine-Learning"
     },
     {
       name: "Credibility Detection of Health Web Blogs Using Explainable AI",
       description: "Developed a comprehensive system to detect credibility of health web blogs using machine learning models, PageRank algorithm, and explainable AI techniques. Implemented web scraping, author analysis, customer ratings classification, and SHAP values for transparency. Utilized multiple regression models and classification algorithms to assess website features, author credibility, and content quality.",
       skills: ["Machine Learning", "Explainable AI", "Web Scraping", "PageRank", "SHAP", "NLP", "Healthcare Analytics"],
-      image: "/health-credibility-project.png",
+      image: getImagePath("/health-credibility-project.png"),
       githubUrl: "https://github.com/aditireddy-d/Credibility-Detection-of-Health-Web-Blogs-Using-Explainable-AI"
     },
     {
       name: "Instacart Sales Forecasting & Recommendation System",
       description: "Built a comprehensive recommendation system using XGBoost for reorder prediction and K-Nearest Neighbors for collaborative filtering. Implemented customer segmentation and personalized recommendations based on spending patterns, achieving high precision and recall metrics.",
       skills: ["Python", "XGBoost", "K-Nearest Neighbors", "Customer Segmentation", "Machine Learning"],
-      image: "/project.png",
+      image: getImagePath("/project.png"),
       githubUrl: "https://github.com/aditireddy-d/Instacart_Sales-Forecasting_Recommendation-System"
     },
     {
       name: "Cloud-Native ETL Pipeline for YouTube Analytics",
       description: "Built a cloud-native ETL pipeline using AWS and PySpark to analyze YouTube trends across countries, cleaning and converting 170K+ semi-structured records to partitioned Parquet format in Amazon S3. Developed 3+ AWS Glue jobs and Lambda triggers for region based ingestion, schema mapping and data partitioning by country. Queried datasets in Athena and visualized regional category trends to enable content performance insights using SQL.",
       skills: ["AWS", "PySpark", "ETL", "Data Engineering", "Amazon S3", "AWS Glue", "Athena"],
-      image: "/youtube-etl-project.png",
+      image: getImagePath("/youtube-etl-project.png"),
       githubUrl: "https://github.com/aditireddy-d/CloudDataEngineering-Youtube-Analysis-Project"
     },
     {
       name: "Strategic Insights using PowerBI",
       description: "Drove strategies for Mitron Bank's new credit card launch by developing 4 Power BI dashboards focused on income analysis, expenditure trends and customer segmentation by demographics. Developed 3 Power BI dashboards on income analysis, expenditure trends, and customer segmentation by demographics. Designed a web like interface with button based navigation and statistical visuals to support effective decision making.",
       skills: ["Power BI", "Data Visualization", "Business Intelligence", "Customer Segmentation", "Financial Analytics", "Dashboard Design"],
-      image: "/powerbi-project.png",
+      image: getImagePath("/powerbi-project.png"),
       githubUrl: "https://github.com/aditireddy-d/Strategic-Insights-for-Mitron-Bank-New-Credit-Line"
     },
     {
       name: "Emotion-Driven Chord Generation Using Lyrics",
       description: "Generated emotion driven chord progressions using a fine tuned GPT-2 model by developing an AI system that classifies song lyrics by genre with BERT and detects emotion using VADER. Engineered an end-to-end pipeline integrating Hugging Face Transformers, Scikit-learn and pretty_midi to convert lyrics into audio ready chord sequences. Achieved 8/10 evaluation score from Falcon-7B.",
       skills: ["GPT-2", "BERT", "NLP", "Machine Learning", "Hugging Face", "VADER", "Music Generation"],
-      image: "/music-ai-project.png",
+      image: getImagePath("/music-ai-project.png"),
       githubUrl: "https://github.com/aditireddy-d/Emotion-Based-Chord-Generation-Using-Song-Lyrics"
     },
     {
       name: "Cooking Recipe Recommendation System with ETL Pipeline",
       description: "Built a comprehensive recipe recommendation system using web-scraped data from Jamie Oliver's website. Developed similarity scoring algorithms to rank recipes based on available ingredients and user preferences. Implemented end-to-end ETL pipeline with Apache Airflow, FastAPI, Streamlit UI, JWT authentication, and cloud deployment on GCP. Features include recipe caching, email notifications, data validation, and BigQuery visualizations.",
       skills: ["ETL", "Apache Airflow", "FastAPI", "Streamlit", "GCP", "Web Scraping", "Machine Learning", "BigQuery"],
-      image: "/cooking-etl-project.png",
+      image: getImagePath("/cooking-etl-project.png"),
       githubUrl: "https://github.com/aditireddy-d/Cooking-ETL"
     },
 
@@ -94,6 +95,9 @@ const ProjectsSection = () => {
       window.open(project.githubUrl, '_blank');
     }
   };
+
+  // Debug: Log the image paths
+  console.log('Project images:', projects.map(p => ({ name: p.name, image: p.image })));
 
   return (
     <section id="projects" className="py-20 bg-blue-500 relative overflow-hidden">
@@ -123,69 +127,18 @@ const ProjectsSection = () => {
               </CardHeader>
               <CardContent className="pt-0">
                 <div className="w-full h-40 mb-4 bg-white rounded-lg flex items-center justify-center overflow-hidden shadow-lg border border-yellow-200 hover:shadow-xl transition-all duration-300 group-hover:shadow-yellow-200/30">
-                  {project.name === "Diabetes Disease Prediction" ? (
-                    <img 
-                      src="/diabetes-project.png" 
-                      alt="Diabetes Disease Prediction - Machine Learning"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "Credibility Detection of Health Web Blogs Using Explainable AI" ? (
-                    <img 
-                      src="/health-credibility-project.png" 
-                      alt="Credibility Detection of Health Web Blogs Using Explainable AI - Healthcare Analytics"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "Portfolio Allocation Model" ? (
-                    <img 
-                      src="/stocks-project.png" 
-                      alt="Portfolio Allocation Model - Stock Analysis"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "Energy Consumption Forecasting" ? (
-                    <img 
-                      src="/energy-project.png" 
-                      alt="Energy Consumption Forecasting - Energy Analysis"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "COVID-19 Data Exploration" ? (
-                    <img 
-                      src="/covid-project.png" 
-                      alt="COVID-19 Data Exploration - Data Analysis"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "Instacart Sales Forecasting & Recommendation System" ? (
-                    <img 
-                      src="/instacart-project.png" 
-                      alt="Instacart Sales Forecasting & Recommendation System - Machine Learning"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "Cloud-Native ETL Pipeline for YouTube Analytics" ? (
-                    <img 
-                      src="/youtube-etl-project.png" 
-                      alt="Cloud-Native ETL Pipeline for YouTube Analytics - Data Engineering"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "Strategic Insights using PowerBI" ? (
-                    <img 
-                      src="/powerbi-project.png" 
-                      alt="Strategic Insights using PowerBI - Business Intelligence"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "Emotion-Driven Chord Generation Using Lyrics" ? (
-                    <img 
-                      src="/music-ai-project.png" 
-                      alt="Emotion-Driven Chord Generation Using Lyrics - AI Music Generation"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : project.name === "Cooking Recipe Recommendation System with ETL Pipeline" ? (
-                    <img 
-                      src="/cooking-etl-project.png" 
-                      alt="Cooking Recipe Recommendation System with ETL Pipeline - Data Engineering"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    />
-                  ) : (
-                    <span className="text-gray-500 text-sm">Project Image</span>
-                  )}
+                  <img 
+                    src={project.image} 
+                    alt={`${project.name} - Project Image`}
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      console.error('Failed to load project image:', project.image);
+                      // Show a fallback placeholder
+                      e.currentTarget.src = getImagePath("/placeholder.svg");
+                      e.currentTarget.alt = "Project Image Placeholder";
+                    }}
+                    onLoad={() => console.log('Successfully loaded project image:', project.image)}
+                  />
                 </div>
                 <p className="text-gray-700 mb-4 text-sm leading-relaxed line-clamp-none h-auto overflow-hidden min-h-[8rem]">
                   {project.description}

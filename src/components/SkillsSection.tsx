@@ -1,42 +1,43 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { getImagePath } from "@/utils/imagePath";
 
 const SkillsSection = () => {
   const programmingLanguages = [
-    { name: "Python", icon: "/python-icon.png", isImage: true, color: "bg-yellow-100" },
-    { name: "R", icon: "/r-icon.png", isImage: true, color: "bg-blue-100" },
-    { name: "MySQL", icon: "/mysql-icon.png", isImage: true, color: "bg-orange-100" },
-    { name: "Java", icon: "/java-icon.png", isImage: true, color: "bg-red-100" }
+    { name: "Python", icon: getImagePath("/python-icon.png"), isImage: true, color: "bg-yellow-100" },
+    { name: "R", icon: getImagePath("/r-icon.png"), isImage: true, color: "bg-blue-100" },
+    { name: "MySQL", icon: getImagePath("/mysql-icon.png"), isImage: true, color: "bg-orange-100" },
+    { name: "Java", icon: getImagePath("/java-icon.png"), isImage: true, color: "bg-red-100" }
   ];
 
   const libraries = [
-    { name: "Pandas", icon: "/pandas-icon.png", isImage: true, color: "bg-green-100" },
-    { name: "NumPy", icon: "/numpy-icon.png", isImage: true, color: "bg-blue-100" },
-    { name: "Scikit-Learn", icon: "/scikit-icon.png", isImage: true, color: "bg-orange-100" },
-    { name: "Keras", icon: "/keras-icon.png", isImage: true, color: "bg-red-100" },
-    { name: "TensorFlow", icon: "/tensorflow-icon.png", isImage: true, color: "bg-yellow-100" },
-    { name: "PyTorch", icon: "/pytorch-icon.png", isImage: true, color: "bg-purple-100" }
+    { name: "Pandas", icon: getImagePath("/pandas-icon.png"), isImage: true, color: "bg-green-100" },
+    { name: "NumPy", icon: getImagePath("/numpy-icon.png"), isImage: true, color: "bg-blue-100" },
+    { name: "Scikit-Learn", icon: getImagePath("/scikit-icon.png"), isImage: true, color: "bg-orange-100" },
+    { name: "Keras", icon: getImagePath("/keras-icon.png"), isImage: true, color: "bg-red-100" },
+    { name: "TensorFlow", icon: getImagePath("/tensorflow-icon.png"), isImage: true, color: "bg-yellow-100" },
+    { name: "PyTorch", icon: getImagePath("/pytorch-icon.png"), isImage: true, color: "bg-purple-100" }
   ];
 
   const toolsAndTechnologies = [
-    { name: "Tableau", icon: "/tableau-icon.png", isImage: true, color: "bg-blue-100" },
-    { name: "PowerBI", icon: "/powerbi-icon.png", isImage: true, color: "bg-yellow-100" },
-    { name: "Seaborn", icon: "/seaborn-icon.png", isImage: true, color: "bg-pink-100" },
-    { name: "Matlab", icon: "/matlab-icon.png", isImage: true, color: "bg-orange-100" },
-    { name: "MySQL Workbench", icon: "/mysqlworkbench-icon.png", isImage: true, color: "bg-blue-100" },
-    { name: "Machine Learning", icon: "/machinelearning-icon.png", isImage: true, color: "bg-green-100" },
-    { name: "Artificial Intelligence", icon: "/ai-icon.png", isImage: true, color: "bg-purple-100" },
-    { name: "LLM", icon: "/llm-icon.png", isImage: true, color: "bg-indigo-100" },
-    { name: "Excel", icon: "/excel-icon.png", isImage: true, color: "bg-green-100" },
-    { name: "PowerPoint", icon: "/powerpoint-icon.png", isImage: true, color: "bg-red-100" },
-    { name: "Google Sheets", icon: "/googlesheets-icon.png", isImage: true, color: "bg-green-100" },
-    { name: "Microsoft Word", icon: "/word-icon.png", isImage: true, color: "bg-blue-100" },
-    { name: "ETL", icon: "/etl-icon.png", isImage: true, color: "bg-gray-100" },
-    { name: "AWS", icon: "/aws-icon.png", isImage: true, color: "bg-orange-100" },
-    { name: "Airflow", icon: "/airflow-icon.png", isImage: true, color: "bg-blue-100" },
-    { name: "Visual Studio", icon: "/visualstudio-icon.png", isImage: true, color: "bg-purple-100" },
-    { name: "Jupyter Notebook", icon: "/jupyter-icon.png", isImage: true, color: "bg-orange-100" },
-    { name: "Git", icon: "/git-icon.png", isImage: true, color: "bg-orange-100" }
+    { name: "Tableau", icon: getImagePath("/tableau-icon.png"), isImage: true, color: "bg-blue-100" },
+    { name: "PowerBI", icon: getImagePath("/powerbi-icon.png"), isImage: true, color: "bg-yellow-100" },
+    { name: "Seaborn", icon: getImagePath("/seaborn-icon.png"), isImage: true, color: "bg-pink-100" },
+    { name: "Matlab", icon: getImagePath("/matlab-icon.png"), isImage: true, color: "bg-orange-100" },
+    { name: "MySQL Workbench", icon: getImagePath("/mysqlworkbench-icon.png"), isImage: true, color: "bg-blue-100" },
+    { name: "Machine Learning", icon: getImagePath("/machinelearning-icon.png"), isImage: true, color: "bg-green-100" },
+    { name: "Artificial Intelligence", icon: getImagePath("/ai-icon.png"), isImage: true, color: "bg-purple-100" },
+    { name: "LLM", icon: getImagePath("/llm-icon.png"), isImage: true, color: "bg-indigo-100" },
+    { name: "Excel", icon: getImagePath("/excel-icon.png"), isImage: true, color: "bg-green-100" },
+    { name: "PowerPoint", icon: getImagePath("/powerpoint-icon.png"), isImage: true, color: "bg-red-100" },
+    { name: "Google Sheets", icon: getImagePath("/googlesheets-icon.png"), isImage: true, color: "bg-green-100" },
+    { name: "Microsoft Word", icon: getImagePath("/word-icon.png"), isImage: true, color: "bg-blue-100" },
+    { name: "ETL", icon: getImagePath("/etl-icon.png"), isImage: true, color: "bg-gray-100" },
+    { name: "AWS", icon: getImagePath("/aws-icon.png"), isImage: true, color: "bg-orange-100" },
+    { name: "Airflow", icon: getImagePath("/airflow-icon.png"), isImage: true, color: "bg-blue-100" },
+    { name: "Visual Studio", icon: getImagePath("/visualstudio-icon.png"), isImage: true, color: "bg-purple-100" },
+    { name: "Jupyter Notebook", icon: getImagePath("/jupyter-icon.png"), isImage: true, color: "bg-orange-100" },
+    { name: "Git", icon: getImagePath("/git-icon.png"), isImage: true, color: "bg-orange-100" }
   ];
 
   return (
@@ -67,6 +68,11 @@ const SkillsSection = () => {
                           src={skill.icon} 
                           alt={skill.name}
                           className="w-12 h-12 object-contain"
+                          onError={(e) => {
+                            console.error('Failed to load image:', skill.icon);
+                            e.currentTarget.style.display = 'none';
+                          }}
+                          onLoad={() => console.log('Successfully loaded image:', skill.icon)}
                         />
                       ) : (
                         <span className="text-3xl">{skill.icon}</span>
@@ -93,6 +99,11 @@ const SkillsSection = () => {
                           src={library.icon} 
                           alt={library.name}
                           className="w-12 h-12 object-contain"
+                          onError={(e) => {
+                            console.error('Failed to load image:', library.icon);
+                            e.currentTarget.style.display = 'none';
+                          }}
+                          onLoad={() => console.log('Successfully loaded image:', library.icon)}
                         />
                       ) : (
                         <span className="text-3xl">{library.icon}</span>
@@ -119,6 +130,11 @@ const SkillsSection = () => {
                           src={tool.icon} 
                           alt={tool.name}
                           className="w-12 h-12 object-contain"
+                          onError={(e) => {
+                            console.error('Failed to load image:', tool.icon);
+                            e.currentTarget.style.display = 'none';
+                          }}
+                          onLoad={() => console.log('Successfully loaded image:', tool.icon)}
                         />
                       ) : (
                         <span className="text-3xl">{tool.icon}</span>

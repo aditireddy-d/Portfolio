@@ -31,7 +31,7 @@ const ExperienceSection = () => {
       title: "BUSINESS ANALYST INTERN",
       company: "STANDARDWINGS TECHNOLOGIES PVT. LTD",
       period: "December 2023 - July 2024",
-      location: "Nashik, India",
+      location: "India",
       description: "",
       achievements: [
         "Documented client requirements by collaborating with 15+ cross-functional team members and attending client meetings",

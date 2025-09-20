@@ -1,8 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import githubLogo from "@/assets/github-logo.svg";
 import linkedinLogo from "@/assets/linkedin-logo.svg";
+import { getImagePath } from "@/utils/imagePath";
 
 const AboutSection = () => {
+  const resumeUrl = getImagePath("/Aditi_Resume.pdf");
+  console.log('Resume URL:', resumeUrl);
+  
   return (
     <section id="about" className="py-20 bg-blue-500 relative overflow-hidden">
       {/* Bubble Effects */}
@@ -86,7 +90,7 @@ const AboutSection = () => {
                 
                 {/* Resume box */}
                 <div className="bg-pink-500 rounded-xl p-6 shadow-lg border-2 border-pink-600 text-center hover:bg-pink-400 transition-colors duration-300 cursor-pointer h-32">
-                  <a href="/Aditi_Resume.pdf" target="_blank" rel="noopener noreferrer" className="block h-full">
+                  <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="block h-full">
                     <div className="space-y-3 h-full flex flex-col justify-center">
                       <div className="text-3xl">📄</div>
                       <div className="text-yellow-300 text-base font-medium">Resume</div>
