@@ -4,15 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://aditireddy-d.github.io/Portfolio",
-  "scripts": {
+    "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/404.html",
+    "build": "vite build && cp docs/index.html docs/404.html",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
+
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
