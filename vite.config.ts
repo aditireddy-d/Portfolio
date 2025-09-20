@@ -4,10 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  // base: mode === "production" ? "/Portfolio/" : "/",
-  base: "/Portfolio/",
+  base: "/Portfolio/",                    // must match repo name
   server: { host: "::", port: 8080 },
-  build: { outDir: "docs", emptyOutDir: true },
+  build: { outDir: "dist", emptyOutDir: true },   // build to dist
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
 }));
