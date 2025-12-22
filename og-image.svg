@@ -18,13 +18,8 @@
   <circle cx="150" cy="500" r="50" fill="rgba(255,255,255,0.1)"/>
   
   <!-- Main text -->
-  <text x="600" y="280" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">
+  <text x="600" y="315" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">
     Welcome to Aditi's Portfolio
-  </text>
-  
-  <!-- Subtitle -->
-  <text x="600" y="360" font-family="Arial, sans-serif" font-size="32" fill="rgba(255,255,255,0.9)" text-anchor="middle" dominant-baseline="middle">
-    Data Science &amp; Machine Learning
   </text>
 </svg>
 
