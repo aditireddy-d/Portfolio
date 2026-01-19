@@ -64,15 +64,6 @@
   }
 }
 
-/* Moving train animation */
-@keyframes train {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
-}
 
 /* Enhanced smoke animation */
 @keyframes smoke {

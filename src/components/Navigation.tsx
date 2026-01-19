@@ -7,7 +7,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'skills', 'projects', 'experience', 'contact'];
+      const sections = ['about', 'education', 'experience', 'projects', 'skills', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -43,6 +43,17 @@ const Navigation = () => {
             }`}
           >
             About Me
+          </button>
+          
+          <button
+            onClick={() => scrollToSection('education')}
+            className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+              activeSection === 'education'
+                ? 'bg-green-500 text-white shadow-lg'
+                : 'bg-green-600 text-white hover:bg-green-500'
+            }`}
+          >
+            Education
           </button>
           
           <button
