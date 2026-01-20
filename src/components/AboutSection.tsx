@@ -13,7 +13,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">About Me</h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Transforming data into actionable insights
+            Giving silent data a voice
           </p>
         </div>
         
