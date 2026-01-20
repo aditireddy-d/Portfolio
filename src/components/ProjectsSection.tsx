@@ -102,27 +102,27 @@ const ProjectsSection = () => {
   console.log('Project images:', projects.map(p => ({ name: p.name, image: p.image })));
 
   return (
-    <section id="projects" className="py-20 bg-white relative overflow-hidden">
+    <section id="projects" className="py-20 bg-black relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Projects</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Projects</h2>
+          <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className={`hover:shadow-lg transition-all duration-300 group bg-white border border-slate-200 hover:border-blue-300 h-[40rem] flex flex-col overflow-hidden ${project.githubUrl ? 'cursor-pointer' : ''}`}
+              className={`hover:shadow-lg transition-all duration-300 group bg-slate-900 border border-slate-800 hover:border-blue-500 h-[40rem] flex flex-col overflow-hidden ${project.githubUrl ? 'cursor-pointer' : ''}`}
               onClick={() => handleProjectClick(project)}
             >
               <CardHeader className="pb-3 flex-shrink-0 px-4 pt-4">
-                <CardTitle className="text-lg text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2 font-semibold">
+                <CardTitle className="text-lg text-white group-hover:text-blue-500 transition-colors line-clamp-2 font-semibold">
                   {project.name}
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-0 flex flex-col flex-1 min-h-0 px-4 pb-4">
-                <div className="w-full h-48 mb-4 bg-slate-50 rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 p-2 flex-shrink-0">
+                <div className="w-full h-48 mb-4 bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-slate-700 hover:shadow-md transition-all duration-300 p-2 flex-shrink-0">
                   <img 
                     src={project.image} 
                     alt={`${project.name} - Project Image`}
@@ -137,7 +137,7 @@ const ProjectsSection = () => {
                     onLoad={() => console.log('Successfully loaded project image:', project.image)}
                   />
                 </div>
-                <p className="text-slate-600 mb-4 text-sm leading-relaxed line-clamp-5 overflow-hidden text-ellipsis flex-shrink">
+                <p className="text-slate-300 mb-4 text-sm leading-relaxed line-clamp-5 overflow-hidden text-ellipsis flex-shrink">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 flex-shrink-0 mt-auto">
@@ -145,7 +145,7 @@ const ProjectsSection = () => {
                     <Badge 
                       key={skillIndex} 
                       variant="secondary"
-                      className="text-xs font-medium px-3 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200 transition-colors"
+                      className="text-xs font-medium px-3 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-colors"
                     >
                       {skill}
                     </Badge>

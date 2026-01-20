@@ -41,22 +41,22 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-slate-50 relative overflow-hidden">
+    <section id="skills" className="py-20 bg-black relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Skills</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Skills</h2>
+          <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
         
         <div className="space-y-16">
           {/* Programming Languages */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-slate-900 text-center">Programming Languages</h3>
+            <h3 className="text-2xl font-bold text-white text-center">Programming Languages</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               {programmingLanguages.map((skill, skillIndex) => (
-                <Card key={skillIndex} className="hover:shadow-md transition-all duration-300 hover:border-blue-300 border border-slate-200 h-32 bg-white relative overflow-hidden group">
+                <Card key={skillIndex} className="hover:shadow-md transition-all duration-300 hover:border-blue-500 border border-slate-800 h-32 bg-slate-900 relative overflow-hidden group">
                   <CardContent className="p-4 text-center relative z-10">
-                    <div className="w-16 h-16 mb-2 mx-auto flex items-center justify-center bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200">
+                    <div className="w-16 h-16 mb-2 mx-auto flex items-center justify-center bg-slate-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-slate-700">
                       {skill.isImage ? (
                         <img 
                           src={skill.icon} 
@@ -72,7 +72,7 @@ const SkillsSection = () => {
                         <span className="text-3xl">{skill.icon}</span>
                       )}
                     </div>
-                    <h4 className="font-semibold text-xs text-slate-700 transition-all duration-300 font-mono tracking-wide">{skill.name}</h4>
+                    <h4 className="font-semibold text-xs text-slate-300 transition-all duration-300 font-mono tracking-wide">{skill.name}</h4>
                   </CardContent>
                 </Card>
               ))}
@@ -81,12 +81,12 @@ const SkillsSection = () => {
 
           {/* Libraries */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-slate-900 text-center">Libraries</h3>
+            <h3 className="text-2xl font-bold text-white text-center">Libraries</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
               {libraries.map((library, libraryIndex) => (
-                <Card key={libraryIndex} className="hover:shadow-md transition-all duration-300 hover:border-blue-300 border border-slate-200 h-32 bg-white relative overflow-hidden group">
+                <Card key={libraryIndex} className="hover:shadow-md transition-all duration-300 hover:border-blue-500 border border-slate-800 h-32 bg-slate-900 relative overflow-hidden group">
                   <CardContent className="p-4 text-center relative z-10">
-                    <div className="w-16 h-16 mb-2 mx-auto flex items-center justify-center bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200">
+                    <div className="w-16 h-16 mb-2 mx-auto flex items-center justify-center bg-slate-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-slate-700">
                       {library.isImage ? (
                         <img 
                           src={library.icon} 
@@ -102,7 +102,7 @@ const SkillsSection = () => {
                         <span className="text-3xl">{library.icon}</span>
                       )}
                     </div>
-                    <h4 className="font-semibold text-xs text-slate-700 transition-all duration-300 font-mono tracking-wide">{library.name}</h4>
+                    <h4 className="font-semibold text-xs text-slate-300 transition-all duration-300 font-mono tracking-wide">{library.name}</h4>
                   </CardContent>
                 </Card>
               ))}
@@ -111,12 +111,12 @@ const SkillsSection = () => {
 
           {/* Tools & Technologies */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-slate-900 text-center">Tools & Technologies</h3>
+            <h3 className="text-2xl font-bold text-white text-center">Tools & Technologies</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-9 gap-4 max-w-6xl mx-auto">
               {toolsAndTechnologies.map((tool, toolIndex) => (
-                <Card key={toolIndex} className="hover:shadow-md transition-all duration-300 hover:border-blue-300 border border-slate-200 h-32 bg-white relative overflow-hidden group">
+                <Card key={toolIndex} className="hover:shadow-md transition-all duration-300 hover:border-blue-500 border border-slate-800 h-32 bg-slate-900 relative overflow-hidden group">
                   <CardContent className="p-4 text-center relative z-10">
-                    <div className="w-16 h-16 mb-2 mx-auto flex items-center justify-center bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200">
+                    <div className="w-16 h-16 mb-2 mx-auto flex items-center justify-center bg-slate-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-slate-700">
                       {tool.isImage ? (
                         <img 
                           src={tool.icon} 
@@ -132,7 +132,7 @@ const SkillsSection = () => {
                         <span className="text-3xl">{tool.icon}</span>
                       )}
                     </div>
-                    <h4 className="font-semibold text-xs text-slate-700 leading-tight transition-all duration-300 font-mono tracking-wide">{tool.name}</h4>
+                    <h4 className="font-semibold text-xs text-slate-300 leading-tight transition-all duration-300 font-mono tracking-wide">{tool.name}</h4>
                   </CardContent>
                 </Card>
               ))}

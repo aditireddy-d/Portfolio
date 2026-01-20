@@ -61,36 +61,36 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-slate-50 relative overflow-hidden">
+    <section id="experience" className="py-20 bg-black relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Work Experience</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Work Experience</h2>
+          <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
         
         <div className="max-w-5xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <Card key={index} className="bg-slate-900 border border-slate-800 shadow-sm hover:shadow-md hover:border-slate-700 transition-all duration-300">
               <CardHeader className="pb-4">
                 <div className="flex items-start gap-4">
                   {exp.logo && (
                     <img 
                       src={exp.logo} 
                       alt={`${exp.company} logo`}
-                      className="h-14 w-auto max-w-28 object-contain bg-white rounded-lg p-2 border border-slate-200"
+                      className="h-14 w-auto max-w-28 object-contain bg-white rounded-lg p-2 border border-slate-700"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
                       }}
                     />
                   )}
                   <div className="flex-1">
-                    <CardTitle className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+                    <CardTitle className="text-xl md:text-2xl font-bold text-white mb-2">
                       {exp.title}
                     </CardTitle>
-                    <div className="text-slate-600 mb-2 font-medium">
+                    <div className="text-slate-300 mb-2 font-medium">
                       {exp.company}
                     </div>
-                    <div className="text-slate-500 text-sm">
+                    <div className="text-slate-400 text-sm">
                       {exp.period} • {exp.location}
                     </div>
                   </div>
@@ -99,8 +99,8 @@ const ExperienceSection = () => {
               <CardContent className="pt-0">
                 <ul className="space-y-3">
                   {exp.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="text-slate-700 flex items-start leading-relaxed">
-                      <span className="mr-3 text-blue-600 font-bold mt-1">•</span>
+                    <li key={achIndex} className="text-slate-300 flex items-start leading-relaxed">
+                      <span className="mr-3 text-blue-500 font-bold mt-1">•</span>
                       <span>{achievement}</span>
                     </li>
                   ))}

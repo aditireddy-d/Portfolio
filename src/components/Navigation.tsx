@@ -31,7 +31,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white z-50 shadow-md border-b border-slate-200">
+    <nav className="fixed top-0 left-0 right-0 bg-black z-50 shadow-lg border-b border-slate-800">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-center items-center space-x-6 flex-wrap">
           <button
@@ -39,7 +39,7 @@ const Navigation = () => {
             className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'about'
                 ? 'bg-blue-600 text-white shadow-sm'
-                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                : 'text-slate-300 hover:text-blue-500 hover:bg-slate-900'
             }`}
           >
             About Me
@@ -50,7 +50,7 @@ const Navigation = () => {
             className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'education'
                 ? 'bg-blue-600 text-white shadow-sm'
-                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                : 'text-slate-300 hover:text-blue-500 hover:bg-slate-900'
             }`}
           >
             Education
@@ -61,7 +61,7 @@ const Navigation = () => {
             className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'experience'
                 ? 'bg-blue-600 text-white shadow-sm'
-                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                : 'text-slate-300 hover:text-blue-500 hover:bg-slate-900'
             }`}
           >
             Experience
@@ -72,7 +72,7 @@ const Navigation = () => {
             className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'projects'
                 ? 'bg-blue-600 text-white shadow-sm'
-                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                : 'text-slate-300 hover:text-blue-500 hover:bg-slate-900'
             }`}
           >
             Projects
@@ -83,7 +83,7 @@ const Navigation = () => {
             className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'skills'
                 ? 'bg-blue-600 text-white shadow-sm'
-                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                : 'text-slate-300 hover:text-blue-500 hover:bg-slate-900'
             }`}
           >
             Skills
@@ -91,7 +91,7 @@ const Navigation = () => {
           
           <button
             onClick={() => navigate('/get-in-touch')}
-            className="px-5 py-2 rounded-md font-medium transition-all duration-200 text-slate-700 hover:text-blue-600 hover:bg-slate-50"
+            className="px-5 py-2 rounded-md font-medium transition-all duration-200 text-slate-300 hover:text-blue-500 hover:bg-slate-900"
           >
             Get in Touch
           </button>
