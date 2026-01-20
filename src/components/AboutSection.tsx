@@ -54,7 +54,7 @@ const AboutSection = () => {
                     <div className="text-2xl">📧</div>
                     <div className="space-y-1">
                       <div className="text-slate-700 text-xs font-medium">ad7977@rit.edu</div>
-                      <div className="text-slate-700 text-xs font-medium">aditireddy22.doma@gmail.com</div>
+                      <div className="text-slate-700 text-xs font-medium">aditidoma@gmail.com</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -63,7 +63,7 @@ const AboutSection = () => {
                 <Card className="bg-white rounded-lg p-6 shadow-sm border border-slate-200 text-center h-32 hover:shadow-md transition-shadow">
                   <CardContent className="space-y-3 h-full flex flex-col justify-center p-0">
                     <div className="text-2xl">📍</div>
-                    <div className="text-slate-700 text-sm font-medium">Rochester, NY</div>
+                    <div className="text-slate-700 text-sm font-medium">Wherever the data takes me</div>
                   </CardContent>
                 </Card>
               </div>
