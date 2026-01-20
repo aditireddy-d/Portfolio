@@ -9,16 +9,9 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-tight">
-                Hi, I'm <span className="text-blue-600">Aditi Reddy Doma</span>
+              <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 leading-tight">
+                Hey there! I am <span className="text-blue-600">Aditi Reddy Doma</span> and welcome to my data story
               </h1>
-              <p className="text-2xl lg:text-3xl text-slate-600 font-light">
-                Data Scientist & Machine Learning Engineer
-              </p>
-              <p className="text-lg text-slate-500 leading-relaxed max-w-2xl">
-                Transforming complex data into actionable insights through advanced analytics, 
-                machine learning, and data engineering solutions.
-              </p>
             </div>
           </div>
           
