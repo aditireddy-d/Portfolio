@@ -32,43 +32,32 @@ const html = `
       background: #000000;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       overflow: hidden;
       padding: 60px 80px;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      position: relative;
     }
-    .left-content {
-      flex: 1;
+    .content {
+      width: 100%;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
+      text-align: center;
       color: white;
       z-index: 2;
-      text-align: center;
     }
     .welcome-text {
-      font-size: 64px;
+      font-size: 72px;
       font-weight: 600;
       line-height: 1.2;
       letter-spacing: -0.02em;
+      margin-bottom: 20px;
     }
     .welcome-text .name {
       color: #3b82f6;
       font-weight: 700;
-    }
-    .photo-wrapper {
-      width: 400px;
-      height: 400px;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 3px solid #1e293b;
-      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
-      flex-shrink: 0;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
     .accent-line {
       position: absolute;
@@ -81,11 +70,8 @@ const html = `
   </style>
 </head>
 <body>
-  <div class="left-content">
+  <div class="content">
     <div class="welcome-text">Welcome to <span class="name">Aditi's</span> Portfolio</div>
-  </div>
-  <div class="photo-wrapper">
-    <img src="file://${profilePhotoPath}" alt="Aditi Reddy" />
   </div>
   <div class="accent-line"></div>
 </body>
