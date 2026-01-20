@@ -13,7 +13,7 @@ const EducationSection = () => {
       logo: getImagePath("/rit-logo.png"),
       location: "Rochester, NY, USA",
       period: "2024 - 2026",
-      gpa: "3.9/4.0",
+      gpa: "4.0/4.0",
       coursework: [
         "Data Science & Analytics",
         "Database Design",
@@ -33,7 +33,7 @@ const EducationSection = () => {
       logo: null,
       location: "Hyderabad, India",
       period: "2020 - 2024",
-      gpa: null,
+      gpa: "3.52/4.0",
       coursework: [
         "Machine Learning",
         "Deep Learning",
