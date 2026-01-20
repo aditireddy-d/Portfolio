@@ -44,26 +44,17 @@ const html = `
       justify-content: center;
       color: white;
       z-index: 2;
+      text-align: center;
     }
-    .name {
-      font-size: 72px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      line-height: 1.1;
+    .welcome-text {
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
     }
-    .name .highlight {
+    .welcome-text .name {
       color: #3b82f6;
-    }
-    .title {
-      font-size: 36px;
-      font-weight: 300;
-      color: #e5e7eb;
-      margin-bottom: 30px;
-    }
-    .tagline {
-      font-size: 24px;
-      color: #9ca3af;
-      font-weight: 400;
+      font-weight: 700;
     }
     .photo-wrapper {
       width: 400px;
@@ -91,9 +82,7 @@ const html = `
 </head>
 <body>
   <div class="left-content">
-    <div class="name">Aditi <span class="highlight">Reddy Doma</span></div>
-    <div class="title">Data Scientist & Machine Learning Engineer</div>
-    <div class="tagline">Giving silent data a voice</div>
+    <div class="welcome-text">Welcome to <span class="name">Aditi's</span> Portfolio</div>
   </div>
   <div class="photo-wrapper">
     <img src="file://${profilePhotoPath}" alt="Aditi Reddy" />
