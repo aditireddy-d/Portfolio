@@ -15,7 +15,7 @@ const ProjectsSection = () => {
       name: "AutoConvo: Real-Time Driver Intent Detection",
       description: "AutoConvo is a real-time speech-to-intent understanding pipeline designed for in-car assistance. It fuses OpenAI Whisper (ASR) for speech recognition with DistilBERT for natural language intent detection, optimized for NVIDIA Jetson Nano edge deployment using TensorRT. The system transcribes driver voice commands, classifies them into 7+ intent categories (navigate, play music, call contact, etc.), and maintains conversation context. Achieved 91.7% accuracy with TensorRT optimization reducing inference latency to ~385ms, enabling real-time edge operation. Built with Python, PyTorch, Transformers, ONNX Runtime, and TensorRT.",
       skills: ["Python", "PyTorch", "NLP", "Whisper", "DistilBERT", "TensorRT", "Edge Computing", "Real-time Systems"],
-      image: getImagePath("/driver.png"),
+      image: getImagePath("/autoconvo-car.png"),
       githubUrl: "https://github.com/aditireddy-d/AutoConvo-Real-Time-Driver-Intent-Detection"
     },
     {
@@ -91,18 +91,6 @@ const ProjectsSection = () => {
 
   ];
 
-  const skillColors = [
-    "bg-blue-200 text-blue-800",
-    "bg-green-200 text-green-800", 
-    "bg-purple-200 text-purple-800",
-    "bg-pink-200 text-pink-800",
-    "bg-indigo-200 text-indigo-800",
-    "bg-teal-200 text-teal-800",
-    "bg-orange-200 text-orange-800",
-    "bg-red-200 text-red-800",
-    "bg-yellow-200 text-yellow-800",
-    "bg-cyan-200 text-cyan-800"
-  ];
 
   const handleProjectClick = (project: any) => {
     if (project.githubUrl) {
@@ -114,37 +102,32 @@ const ProjectsSection = () => {
   console.log('Project images:', projects.map(p => ({ name: p.name, image: p.image })));
 
   return (
-    <section id="projects" className="py-20 bg-blue-500 relative overflow-hidden">
-      {/* Bubble Effects */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-pink-300 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-24 h-24 bg-yellow-300 rounded-full opacity-30 animate-bounce"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-cyan-300 rounded-full opacity-25 animate-ping"></div>
-      <div className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-purple-300 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute top-1/3 right-10 w-12 h-12 bg-green-300 rounded-full opacity-30 animate-bounce"></div>
+    <section id="projects" className="py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-pink-300 mb-4">Projects</h2>
-          
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Projects</h2>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className={`hover:shadow-2xl hover:shadow-yellow-200/50 transition-all duration-500 group bg-yellow-50 border-2 border-yellow-200 hover:border-yellow-300 h-[40rem] ${project.githubUrl ? 'cursor-pointer' : ''} hover:scale-105 hover:bg-yellow-100/80 backdrop-blur-sm`}
+              className={`hover:shadow-lg transition-all duration-300 group bg-white border border-slate-200 hover:border-blue-300 h-[40rem] flex flex-col overflow-hidden ${project.githubUrl ? 'cursor-pointer' : ''}`}
               onClick={() => handleProjectClick(project)}
             >
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg text-gray-800 group-hover:text-yellow-700 transition-colors line-clamp-2 font-semibold">
+              <CardHeader className="pb-3 flex-shrink-0 px-4 pt-4">
+                <CardTitle className="text-lg text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2 font-semibold">
                   {project.name}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pt-0">
-                <div className="w-full h-40 mb-4 bg-white rounded-lg flex items-center justify-center overflow-hidden shadow-lg border border-yellow-200 hover:shadow-xl transition-all duration-300 group-hover:shadow-yellow-200/30">
+              <CardContent className="pt-0 flex flex-col flex-1 min-h-0 px-4 pb-4">
+                <div className="w-full h-48 mb-4 bg-slate-50 rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 p-2 flex-shrink-0">
                   <img 
                     src={project.image} 
                     alt={`${project.name} - Project Image`}
                     className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                    style={{ maxWidth: '100%', maxHeight: '100%' }}
                     onError={(e) => {
                       console.error('Failed to load project image:', project.image);
                       // Show a fallback placeholder
@@ -154,15 +137,15 @@ const ProjectsSection = () => {
                     onLoad={() => console.log('Successfully loaded project image:', project.image)}
                   />
                 </div>
-                <p className="text-gray-700 mb-4 text-sm leading-relaxed line-clamp-none h-auto overflow-hidden min-h-[8rem]">
+                <p className="text-slate-600 mb-4 text-sm leading-relaxed line-clamp-5 overflow-hidden text-ellipsis flex-shrink">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 min-h-[3rem]">
+                <div className="flex flex-wrap gap-2 flex-shrink-0 mt-auto">
                   {project.skills.map((skill, skillIndex) => (
                     <Badge 
                       key={skillIndex} 
                       variant="secondary"
-                      className={`text-xs font-medium px-3 py-1 rounded-md border transition-all duration-300 hover:scale-110 hover:shadow-md ${skillColors[skillIndex % skillColors.length]}`}
+                      className="text-xs font-medium px-3 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200 transition-colors"
                     >
                       {skill}
                     </Badge>

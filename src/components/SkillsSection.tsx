@@ -102,7 +102,7 @@ const SkillsSection = () => {
                         <span className="text-3xl">{library.icon}</span>
                       )}
                     </div>
-                    <h4 className="font-semibold text-xs text-gray-800 transition-all duration-300 hover:text-gray-900 group-hover:scale-105 font-mono tracking-wide">{library.name}</h4>
+                    <h4 className="font-semibold text-xs text-slate-700 transition-all duration-300 font-mono tracking-wide">{library.name}</h4>
                   </CardContent>
                 </Card>
               ))}
@@ -111,13 +111,12 @@ const SkillsSection = () => {
 
           {/* Tools & Technologies */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-white text-center">Tools & Technologies</h3>
+            <h3 className="text-2xl font-bold text-slate-900 text-center">Tools & Technologies</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-9 gap-4 max-w-6xl mx-auto">
               {toolsAndTechnologies.map((tool, toolIndex) => (
-                <Card key={toolIndex} className={`hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-500 hover:scale-110 border-2 border-gray-300 hover:border-gray-400 h-32 ${tool.color} hover:bg-gradient-to-br hover:from-${tool.color.replace('bg-', '')} hover:to-${tool.color.replace('bg-', '').replace('-100', '-200')} backdrop-blur-sm relative overflow-hidden group`}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-100/20 to-gray-200/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <Card key={toolIndex} className="hover:shadow-md transition-all duration-300 hover:border-blue-300 border border-slate-200 h-32 bg-white relative overflow-hidden group">
                   <CardContent className="p-4 text-center relative z-10">
-                    <div className="w-16 h-16 mb-2 mx-auto flex items-center justify-center bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group-hover:shadow-gray-200/30 border border-gray-200">
+                    <div className="w-16 h-16 mb-2 mx-auto flex items-center justify-center bg-slate-50 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200">
                       {tool.isImage ? (
                         <img 
                           src={tool.icon} 
@@ -133,7 +132,7 @@ const SkillsSection = () => {
                         <span className="text-3xl">{tool.icon}</span>
                       )}
                     </div>
-                    <h4 className="font-semibold text-xs text-gray-800 leading-tight transition-all duration-300 hover:text-gray-900 group-hover:scale-105 font-mono tracking-wide">{tool.name}</h4>
+                    <h4 className="font-semibold text-xs text-slate-700 leading-tight transition-all duration-300 font-mono tracking-wide">{tool.name}</h4>
                   </CardContent>
                 </Card>
               ))}

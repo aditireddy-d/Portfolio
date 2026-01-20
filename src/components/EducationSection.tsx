@@ -126,32 +126,27 @@ const EducationSection = () => {
   );
 
   return (
-    <section id="education" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
-      </div>
-      
+    <section id="education" className="py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
             Education
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
         
         <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="masters" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1">
+            <TabsList className="grid w-full grid-cols-2 mb-8 bg-slate-100 border border-slate-200 rounded-lg p-1">
               <TabsTrigger 
                 value="masters" 
-                className="data-[state=active]:bg-white data-[state=active]:text-blue-900 text-white font-semibold py-3 transition-all duration-200"
+                className="data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm text-slate-700 font-semibold py-3 transition-all duration-200"
               >
                 Master's Degree
               </TabsTrigger>
               <TabsTrigger 
                 value="bachelors"
-                className="data-[state=active]:bg-white data-[state=active]:text-blue-900 text-white font-semibold py-3 transition-all duration-200"
+                className="data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm text-slate-700 font-semibold py-3 transition-all duration-200"
               >
                 Bachelor's Degree
               </TabsTrigger>

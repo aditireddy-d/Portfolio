@@ -1,11 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { getImagePath } from "@/utils/imagePath";
 
 const ExperienceSection = () => {
   const experiences = [
     {
       title: "GRADUATE RESEARCH ASSISTANT",
       company: "ROCHESTER INSTITUTE OF TECHNOLOGY",
+      logo: getImagePath("/rit-logo.png"),
       period: "July 2025 - Present",
       location: "USA",
       description: "",
@@ -19,6 +21,7 @@ const ExperienceSection = () => {
     {
       title: "GRADUATE TEACHING ASSISTANT",
       company: "ROCHESTER INSTITUTE OF TECHNOLOGY",
+      logo: getImagePath("/rit-logo.png"),
       period: "January 2025 - Present",
       location: "USA",
       description: "",
@@ -30,6 +33,7 @@ const ExperienceSection = () => {
     {
       title: "BUSINESS ANALYST INTERN",
       company: "STANDARDWINGS TECHNOLOGIES PVT. LTD",
+      logo: getImagePath("/standardwings-logo.png"),
       period: "December 2023 - July 2024",
       location: "India",
       description: "",
@@ -43,6 +47,7 @@ const ExperienceSection = () => {
     {
       title: "MACHINE LEARNING & DATA ANALYSIS INTERN",
       company: "CLOUD4C",
+      logo: `${getImagePath("/cloud4c-logo.png")}?v=1`,
       period: "June 2023 - August 2023",
       location: "India",
       description: "",
@@ -56,55 +61,52 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-blue-500 relative overflow-hidden">
-      {/* Bubble Effects */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-pink-300 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-24 h-24 bg-yellow-300 rounded-full opacity-30 animate-bounce"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-cyan-300 rounded-full opacity-25 animate-ping"></div>
-      <div className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-purple-300 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute top-1/3 right-10 w-12 h-12 bg-green-300 rounded-full opacity-30 animate-bounce"></div>
+    <section id="experience" className="py-20 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-pink-300 mb-4">Work Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Work Experience</h2>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
         
-        <div className="max-w-4xl mx-auto space-y-8 relative">
-
-          
+        <div className="max-w-5xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative ml-20 mb-12">
-
-              
-              <div className="text-white hover:bg-blue-600/10 p-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
-                <div className="mb-4">
-                  <h3 className={`text-2xl font-bold mb-2 ${
-                    index === 0 ? 'text-yellow-300' : 'text-orange-300'
-                  }`}>
-                    {exp.title}
-                  </h3>
-                  <div className="text-yellow-200 mb-1 font-semibold">
-                    {exp.company} • {exp.period} • {exp.location}
+            <Card key={index} className="bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-start gap-4">
+                  {exp.logo && (
+                    <img 
+                      src={exp.logo} 
+                      alt={`${exp.company} logo`}
+                      className="h-14 w-auto max-w-28 object-contain bg-white rounded-lg p-2 border border-slate-200"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                  )}
+                  <div className="flex-1">
+                    <CardTitle className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+                      {exp.title}
+                    </CardTitle>
+                    <div className="text-slate-600 mb-2 font-medium">
+                      {exp.company}
+                    </div>
+                    <div className="text-slate-500 text-sm">
+                      {exp.period} • {exp.location}
+                    </div>
                   </div>
                 </div>
-                
-                <p className="text-cyan-200 mb-4 leading-relaxed font-medium">
-                  {exp.description}
-                </p>
-                
-                <ul className="space-y-2">
+              </CardHeader>
+              <CardContent className="pt-0">
+                <ul className="space-y-3">
                   {exp.achievements.map((achievement, achIndex) => (
-                                          <li key={achIndex} className={`text-base flex items-start font-medium ${
-                        index === 0 ? 'text-green-200' : 'text-green-300'
-                      }`}>
-                        <span className={`mr-2 text-xl ${
-                          index === 0 ? 'text-yellow-300' : 'text-yellow-300'
-                        }`}>•</span>
-                      {achievement}
+                    <li key={achIndex} className="text-slate-700 flex items-start leading-relaxed">
+                      <span className="mr-3 text-blue-600 font-bold mt-1">•</span>
+                      <span>{achievement}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

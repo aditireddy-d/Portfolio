@@ -31,15 +31,15 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-blue-500 z-50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 bg-white z-50 shadow-md border-b border-slate-200">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex justify-center items-center space-x-8">
+        <div className="flex justify-center items-center space-x-6 flex-wrap">
           <button
             onClick={() => scrollToSection('about')}
-            className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+            className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'about'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-green-600 text-white hover:bg-green-500'
+                ? 'bg-blue-600 text-white shadow-sm'
+                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
             }`}
           >
             About Me
@@ -47,10 +47,10 @@ const Navigation = () => {
           
           <button
             onClick={() => scrollToSection('education')}
-            className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+            className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'education'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-green-600 text-white hover:bg-green-500'
+                ? 'bg-blue-600 text-white shadow-sm'
+                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
             }`}
           >
             Education
@@ -58,10 +58,10 @@ const Navigation = () => {
           
           <button
             onClick={() => scrollToSection('experience')}
-            className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+            className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'experience'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-green-600 text-white hover:bg-green-500'
+                ? 'bg-blue-600 text-white shadow-sm'
+                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
             }`}
           >
             Experience
@@ -69,10 +69,10 @@ const Navigation = () => {
           
           <button
             onClick={() => scrollToSection('projects')}
-            className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+            className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'projects'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-green-600 text-white hover:bg-green-500'
+                ? 'bg-blue-600 text-white shadow-sm'
+                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
             }`}
           >
             Projects
@@ -80,10 +80,10 @@ const Navigation = () => {
           
           <button
             onClick={() => scrollToSection('skills')}
-            className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+            className={`px-5 py-2 rounded-md font-medium transition-all duration-200 ${
               activeSection === 'skills'
-                ? 'bg-green-500 text-white shadow-lg'
-                : 'bg-green-600 text-white hover:bg-green-500'
+                ? 'bg-blue-600 text-white shadow-sm'
+                : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
             }`}
           >
             Skills
@@ -91,9 +91,7 @@ const Navigation = () => {
           
           <button
             onClick={() => navigate('/get-in-touch')}
-            className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-              'bg-green-600 text-white hover:bg-green-500'
-            }`}
+            className="px-5 py-2 rounded-md font-medium transition-all duration-200 text-slate-700 hover:text-blue-600 hover:bg-slate-50"
           >
             Get in Touch
           </button>
