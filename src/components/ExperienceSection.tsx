@@ -6,10 +6,10 @@ const ExperienceSection = () => {
   const experiences = [
     {
       title: "DATA ENGINEER INTERN",
-      company: "ICITIZEN",
+      company: "icitizen",
       logo: null,
       period: "July 2025 - Present",
-      location: "USA",
+      location: "Remote",
       description: "",
       achievements: [
         "Built AWS-powered data pipelines and dashboards to visualize topics of interest for politicians across all U.S. states",
