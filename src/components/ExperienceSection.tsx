@@ -5,9 +5,9 @@ import { getImagePath } from "@/utils/imagePath";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "GRADUATE RESEARCH ASSISTANT",
-      company: "ROCHESTER INSTITUTE OF TECHNOLOGY",
-      logo: getImagePath("/rit-logo.png"),
+      title: "DATA ENGINEER INTERN",
+      company: "ICITIZEN",
+      logo: null,
       period: "July 2025 - Present",
       location: "USA",
       description: "",
