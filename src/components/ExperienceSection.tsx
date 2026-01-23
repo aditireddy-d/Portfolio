@@ -12,11 +12,10 @@ const ExperienceSection = () => {
       location: "Remote",
       description: "",
       achievements: [
-        "Built AWS-powered data pipelines and dashboards to visualize topics of interest for politicians across all U.S. states",
-        "Applied topic modeling and sentiment analysis to identify state-specific research priorities",
-        "Delivered insights enabling targeted funding requests for graduate school research investments"
+        "Extracted and analyzed 500k+ unstructured congressional profiles from Congress.gov and Bioguide into structured datasets using AWS (DynamoDB, S3, Glue, Lambda), enabling real-time updates on political representation and funding interests",
+        "Reduced research time by 23% and enhanced policy engagement by designing interactive U.S. maps in QuickSight, linking states to representatives and senators, highlighting their sponsored bills and funding interests for student government advocacy"
       ],
-      technologies: ["AWS", "Data Engineering", "Data Pipelines", "Data Visualization", "Topic Modeling", "Sentiment Analysis"]
+      technologies: ["AWS", "DynamoDB", "S3", "AWS Glue", "Lambda", "QuickSight", "Data Engineering", "Data Extraction", "Data Visualization"]
     },
     {
       title: "GRADUATE TEACHING ASSISTANT",
