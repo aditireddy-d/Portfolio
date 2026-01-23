@@ -5,8 +5,8 @@ import { getImagePath } from "@/utils/imagePath";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "DATA ENGINEER INTERN",
-      company: "icitizen",
+      title: "Data Engineer Intern",
+      company: "iCitizen",
       logo: null,
       period: "July 2025 - Present",
       location: "Remote",
@@ -16,7 +16,7 @@ const ExperienceSection = () => {
         "Applied topic modeling and sentiment analysis to identify state-specific research priorities",
         "Delivered insights enabling targeted funding requests for graduate school research investments"
       ],
-      technologies: ["Research", "Data Science", "Artificial Intelligence", "Academic Writing"]
+      technologies: ["AWS", "Data Engineering", "Data Pipelines", "Data Visualization", "Topic Modeling", "Sentiment Analysis"]
     },
     {
       title: "GRADUATE TEACHING ASSISTANT",
