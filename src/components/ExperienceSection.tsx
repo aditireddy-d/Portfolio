@@ -19,15 +19,17 @@ const ExperienceSection = () => {
     },
     {
       title: "icitizen",
-      company: "iCitizen",
+      company: "ROCHESTER INSTITUTE OF TECHNOLOGY",
       logo: getImagePath("/rit-logo.png"),
-      period: "January 2025 - Present",
+      period: "July 2025 - Present",
       location: "USA",
       description: "",
       achievements: [
-        "Guided 200 undergraduates in database systems and SQL, through labs focused on query writing, data normalization, and relational modeling using industry-aligned case studies"
+        "Built AWS-powered data pipelines and dashboards to visualize topics of interest for politicians across all U.S. states",
+        "Applied topic modeling and sentiment analysis to identify state-specific research priorities",
+        "Delivered insights enabling targeted funding requests for graduate school research investments"
       ],
-      technologies: ["SQL", "Database Systems", "Teaching", "Data Normalization", "Relational Modeling"]
+      technologies: ["AWS", "Data Pipelines", "Topic Modeling", "Sentiment Analysis", "Data Visualization", "Research Analytics"]
     },
     {
       title: "BUSINESS ANALYST INTERN",
