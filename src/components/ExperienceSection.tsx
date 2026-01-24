@@ -18,7 +18,7 @@ const ExperienceSection = () => {
       technologies: ["AWS", "DynamoDB", "S3", "AWS Glue", "Lambda", "QuickSight", "Data Engineering", "Data Extraction", "Data Visualization"]
     },
     {
-      title: "GRADUATE TEACHING ASSISTANT",
+      title: "icitizen",
       company: "ROCHESTER INSTITUTE OF TECHNOLOGY",
       logo: getImagePath("/rit-logo.png"),
       period: "January 2025 - Present",
