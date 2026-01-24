@@ -19,7 +19,7 @@ const ExperienceSection = () => {
     },
     {
       title: "icitizen",
-      company: "ROCHESTER INSTITUTE OF TECHNOLOGY",
+      company: "iCitizen",
       logo: getImagePath("/rit-logo.png"),
       period: "January 2025 - Present",
       location: "USA",
