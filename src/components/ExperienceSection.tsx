@@ -7,7 +7,7 @@ const ExperienceSection = () => {
     {
       title: "DATA ENGINEER INTERN",
       company: "icitizen",
-      logo: null,
+      logo: getImagePath("/icitizen-logo.png"),
       period: "July 2025 - Present",
       location: "Remote, USA",
       description: "",
