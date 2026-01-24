@@ -18,9 +18,9 @@ const ExperienceSection = () => {
       technologies: ["AWS", "DynamoDB", "S3", "AWS Glue", "Lambda", "QuickSight", "Data Engineering", "Data Extraction", "Data Visualization"]
     },
     {
-      title: "icitizen",
-      company: "ROCHESTER INSTITUTE OF TECHNOLOGY",
-      logo: getImagePath("/rit-logo.png"),
+      title: "Data Engineer",
+      company: "icitizen",
+      logo: null,
       period: "July 2025 - Present",
       location: "USA",
       description: "",
