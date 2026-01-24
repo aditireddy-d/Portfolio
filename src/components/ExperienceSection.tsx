@@ -5,8 +5,8 @@ import { getImagePath } from "@/utils/imagePath";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Data Engineer Intern",
-      company: "iCitizen",
+      title: "DATA ENGINEER INTERN",
+      company: "icitizen",
       logo: null,
       period: "July 2025 - Present",
       location: "Remote",
@@ -16,20 +16,6 @@ const ExperienceSection = () => {
         "Reduced research time by 23% and enhanced policy engagement by designing interactive U.S. maps in QuickSight, linking states to representatives and senators, highlighting their sponsored bills and funding interests for student government advocacy"
       ],
       technologies: ["AWS", "DynamoDB", "S3", "AWS Glue", "Lambda", "QuickSight", "Data Engineering", "Data Extraction", "Data Visualization"]
-    },
-    {
-      title: "Data Engineer",
-      company: "icitizen",
-      logo: null,
-      period: "July 2025 - Present",
-      location: "USA",
-      description: "",
-      achievements: [
-        "Built AWS-powered data pipelines and dashboards to visualize topics of interest for politicians across all U.S. states",
-        "Applied topic modeling and sentiment analysis to identify state-specific research priorities",
-        "Delivered insights enabling targeted funding requests for graduate school research investments"
-      ],
-      technologies: ["AWS", "Data Pipelines", "Topic Modeling", "Sentiment Analysis", "Data Visualization", "Research Analytics"]
     },
     {
       title: "BUSINESS ANALYST INTERN",
