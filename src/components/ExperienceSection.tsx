@@ -9,11 +9,11 @@ const ExperienceSection = () => {
       company: "icitizen",
       logo: null,
       period: "July 2025 - Present",
-      location: "Remote",
+      location: "Remote, USA",
       description: "",
       achievements: [
-        "Extracted and analyzed 500k+ unstructured congressional profiles from Congress.gov and Bioguide into structured datasets using AWS (DynamoDB, S3, Glue, Lambda), enabling real-time updates on political representation and funding interests",
-        "Reduced research time by 23% and enhanced policy engagement by designing interactive U.S. maps in QuickSight, linking states to representatives and senators, highlighting their sponsored bills and funding interests for student government advocacy"
+        "Extracted and analyzed 500k+ unstructured congressional profiles from Congress.gov and Bioguide into structured datasets using AWS (DynamoDB, S3, Glue, Lambda), enabling real-time updates on political representation and funding interests.",
+        "Reduced research time by 23% and enhanced policy engagement by designing interactive U.S. maps in QuickSight, linking states to representatives and senators, highlighting their sponsored bills and funding interests for student government advocacy."
       ],
       technologies: ["AWS", "DynamoDB", "S3", "AWS Glue", "Lambda", "QuickSight", "Data Engineering", "Data Extraction", "Data Visualization"]
     },
