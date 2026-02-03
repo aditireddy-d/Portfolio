@@ -68,13 +68,6 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/aditireddy-d/Strategic-Insights-for-Mitron-Bank-New-Credit-Line"
     },
     {
-      name: "Emotion-Driven Chord Generation Using Lyrics",
-      description: "Generated emotion driven chord progressions using a fine tuned GPT-2 model by developing an AI system that classifies song lyrics by genre with BERT and detects emotion using VADER. Engineered an end-to-end pipeline integrating Hugging Face Transformers, Scikit-learn and pretty_midi to convert lyrics into audio ready chord sequences. Achieved 8/10 evaluation score from Falcon-7B.",
-      skills: ["GPT-2", "BERT", "NLP", "Machine Learning", "Hugging Face", "VADER", "Music Generation"],
-      image: getImagePath("/music-ai-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Emotion-Based-Chord-Generation-Using-Song-Lyrics"
-    },
-    {
       name: "Cooking Recipe Recommendation System with ETL Pipeline",
       description: "Built a comprehensive recipe recommendation system using web-scraped data from Jamie Oliver's website. Developed similarity scoring algorithms to rank recipes based on available ingredients and user preferences. Implemented end-to-end ETL pipeline with Apache Airflow, FastAPI, Streamlit UI, JWT authentication, and cloud deployment on GCP. Features include recipe caching, email notifications, data validation, and BigQuery visualizations.",
       skills: ["ETL", "Apache Airflow", "FastAPI", "Streamlit", "GCP", "Web Scraping", "Machine Learning", "BigQuery"],
