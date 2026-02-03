@@ -47,13 +47,6 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/aditireddy-d/Diabetes-Prediction-Python-Machine-Learning"
     },
     {
-      name: "Credibility Detection of Health Web Blogs Using Explainable AI",
-      description: "Developed a comprehensive system to detect credibility of health web blogs using machine learning models, PageRank algorithm, and explainable AI techniques. Implemented web scraping, author analysis, customer ratings classification, and SHAP values for transparency. Utilized multiple regression models and classification algorithms to assess website features, author credibility, and content quality.",
-      skills: ["Machine Learning", "Explainable AI", "Web Scraping", "PageRank", "SHAP", "NLP", "Healthcare Analytics"],
-      image: getImagePath("/health-credibility-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Credibility-Detection-of-Health-Web-Blogs-Using-Explainable-AI"
-    },
-    {
       name: "Instacart Sales Forecasting & Recommendation System",
       description: "Built a comprehensive recommendation system using XGBoost for reorder prediction and K-Nearest Neighbors for collaborative filtering. Implemented customer segmentation and personalized recommendations based on spending patterns, achieving high precision and recall metrics.",
       skills: ["Python", "XGBoost", "K-Nearest Neighbors", "Customer Segmentation", "Machine Learning"],
