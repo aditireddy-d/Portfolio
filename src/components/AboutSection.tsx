@@ -38,8 +38,8 @@ const AboutSection = () => {
           {/* Contact information boxes */}
           <div className="mt-12 max-w-6xl mx-auto">
             <div className="space-y-6">
-              {/* First row - 3 boxes */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* First row - 2 boxes */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Phone box */}
                 <Card className="bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-800 text-center h-32 hover:shadow-md hover:border-slate-700 transition-all">
                   <CardContent className="space-y-3 h-full flex flex-col justify-center p-0">
@@ -56,14 +56,6 @@ const AboutSection = () => {
                       <div className="text-slate-300 text-xs font-medium">ad7977@rit.edu</div>
                       <div className="text-slate-300 text-xs font-medium">aditidoma@gmail.com</div>
                     </div>
-                  </CardContent>
-                </Card>
-                
-                {/* Location box */}
-                <Card className="bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-800 text-center h-32 hover:shadow-md hover:border-slate-700 transition-all">
-                  <CardContent className="space-y-3 h-full flex flex-col justify-center p-0">
-                    <div className="text-2xl">📍</div>
-                    <div className="text-slate-300 text-sm font-medium">Wherever the data takes me</div>
                   </CardContent>
                 </Card>
               </div>

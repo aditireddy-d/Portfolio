@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Github, ArrowLeft } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -23,13 +23,6 @@ const GetInTouch = () => {
       title: "Phone",
       content: "917-337-7045",
       link: "tel:+19173377045",
-      color: "text-blue-500"
-    },
-    {
-      icon: MapPin,
-      title: "Location",
-      content: "Wherever the data takes me",
-      link: "#",
       color: "text-blue-500"
     },
     {
@@ -102,7 +95,7 @@ const GetInTouch = () => {
                       onClick={() => window.open(info.link, '_blank')}
                       className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300"
                     >
-                      {info.title === "Location" ? "View Location" : `Visit ${info.title}`}
+                      Visit {info.title}
                     </Button>
                   )}
                 </div>
