@@ -6,8 +6,8 @@ const ProjectsSection = () => {
   const projects = [
     {
       name: "IoT Telemetry Analytics for Health Monitoring Devices",
-      description: "This project focuses on analyzing public health and nutrition data from the USDA to identify key predictors of obesity and physical inactivity across U.S. counties. The analysis was conducted for Rochester Regional Health to support data-driven public health planning. Using multiple linear regression and ANOVA, the project quantifies relationships among obesity, smoking, inactivity, and food access, achieving R² = 57.18% with inactivity as the strongest predictor of obesity. Tools used include Minitab, Excel, Tableau, Python (Pandas, Matplotlib), and interactive dashboards for geographic trend visualization.",
-      skills: ["Python", "Pandas", "Tableau", "Statistical Analysis", "Data Visualization", "Healthcare Analytics"],
+      description: "Built a data pipeline using Kafka + PySpark to process 2M+ IoT telemetry records from health devices (glucose, heart-rate). Reduced false alarms by 18% by fine-tuning anomaly detection models (Isolation Forest, ARIMA) for abnormal health data.",
+      skills: ["Kafka", "PySpark", "Data Engineering", "Isolation Forest", "ARIMA", "Anomaly Detection", "IoT", "Healthcare Analytics"],
       image: getImagePath("/iot-project.png"),
       githubUrl: "https://github.com/aditireddy-d/IOT-Telemetry-Analytics-for-Health-Monitoring-Devices"
     },

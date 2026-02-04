@@ -5,45 +5,58 @@ import { getImagePath } from "@/utils/imagePath";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "DATA ENGINEER INTERN",
+      title: "DATA SCIENCE INTERN",
       company: "icitizen",
       logo: getImagePath("/icitizen-logo.png"),
-      period: "July 2025 - Present",
+      period: "May 2025 - Present",
       location: "Remote, USA",
       description: "",
       achievements: [
-        "Extracted and analyzed 500k+ unstructured congressional profiles from Congress.gov and Bioguide into structured datasets using AWS (DynamoDB, S3, Glue, Lambda), enabling real-time updates on political representation and funding interests.",
-        "Reduced research time by 23% and enhanced policy engagement by designing interactive U.S. maps in QuickSight, linking states to representatives and senators, highlighting their sponsored bills and funding interests for student government advocacy."
+        "Web scraped and analyzed 500K+ unstructured congressional profiles from Congress.gov and Bioguide websites using APIs, transforming unstructured data into structured datasets stored in AWS DynamoDB for real-time updates.",
+        "Designed a dynamic U.S. map using D3.js, visualizing senators, their sponsored bills and co-sponsors by state.",
+        "Increased user engagement by 27.2% on the iCitizen app by developing a chatbot predicting likelihood of a bill becoming law."
       ],
-      technologies: ["AWS", "DynamoDB", "S3", "AWS Glue", "Lambda", "QuickSight", "Data Engineering", "Data Extraction", "Data Visualization"]
+      technologies: ["AWS", "DynamoDB", "D3.js", "Web Scraping", "Data Engineering", "Chatbot Development", "Data Visualization"]
+    },
+    {
+      title: "GRADUATE TEACHING ASSISTANT",
+      company: "ROCHESTER INSTITUTE OF TECHNOLOGY",
+      logo: getImagePath("/rit-logo.png"),
+      period: "January 2025 - Present",
+      location: "Rochester, New York",
+      description: "",
+      achievements: [
+        "Guided 200 undergraduates in database systems and SQL through labs focused on query writing and relational data modeling."
+      ],
+      technologies: ["SQL", "Database Systems", "Teaching", "Data Modeling"]
     },
     {
       title: "BUSINESS ANALYST INTERN",
       company: "STANDARDWINGS TECHNOLOGIES PVT. LTD",
       logo: getImagePath("/standardwings-logo.png"),
       period: "December 2023 - July 2024",
-      location: "India",
+      location: "Nashik, India",
       description: "",
       achievements: [
-        "Documented client requirements by collaborating with 15+ cross-functional team members and attending client meetings",
-        "Extracted actionable insights from 20,000+ rows of patient data using MS Excel, then designed a low-code application in Mendix, leading to improved patient onboarding and streamlined appointment scheduling",
-        "Presented the Mendix app functionality to technical and non-technical stakeholders using clear MS PowerPoint decks"
+        "Documented client requirements by collaborating with 15+ cross-functional team members and attending client meetings.",
+        "Extracted actionable insights from 20,000+ rows of patient data using Pandas, which contributed to the design of an application that improved patient onboarding and streamlined appointment scheduling.",
+        "Presented the application functionality to technical and non-technical stakeholders using clear MS PowerPoint decks."
       ],
-      technologies: ["MS Excel", "Mendix", "MS PowerPoint", "Data Analysis", "Client Collaboration", "Low-code Development"]
+      technologies: ["Pandas", "MS Excel", "MS PowerPoint", "Data Analysis", "Client Collaboration"]
     },
     {
-      title: "MACHINE LEARNING & DATA ANALYSIS INTERN",
+      title: "MACHINE LEARNING & DATA ANALYST INTERN",
       company: "CLOUD4C",
       logo: `${getImagePath("/cloud4c-logo.png")}?v=1`,
       period: "June 2023 - August 2023",
-      location: "India",
+      location: "Hyderabad, India",
       description: "",
       achievements: [
-        "Achieved Natural Language Processing (NLP) accuracy above 90% by developing a sentiment analysis product using BERT through transfer learning and fine-tuning on customer raised tickets",
-        "Optimized training pipelines in TensorFlow using dynamic learning rates, mixed-precision training and gradient clipping to improve training efficiency and model stability",
-        "Identified the top 5 recurring customer concerns by applying K-Means clustering on BERT embeddings"
+        "Achieved over 90% accuracy in a sentiment analysis model using BERT to analyze customer feedback.",
+        "Performed large-scale text analysis on customer feedback using Databricks with PySpark for data processing.",
+        "Identified top 5 recurring customer concerns using unsupervised learning (K-Means clustering) on BERT embeddings."
       ],
-      technologies: ["BERT", "TensorFlow", "NLP", "K-Means Clustering", "Transfer Learning", "Sentiment Analysis"]
+      technologies: ["BERT", "Databricks", "PySpark", "NLP", "K-Means Clustering", "Sentiment Analysis", "Unsupervised Learning"]
     }
   ];
 
