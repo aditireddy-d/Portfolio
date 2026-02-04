@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getImagePath } from '@/utils/imagePath';
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('about');
   const navigate = useNavigate();
+  const resumeUrl = getImagePath("/Aditi Reddy Doma_Resume.pdf");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,6 +90,15 @@ const Navigation = () => {
           >
             Skills
           </button>
+          
+          <a
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 rounded-md font-medium transition-all duration-200 text-slate-300 hover:text-blue-500 hover:bg-slate-900"
+          >
+            Resume
+          </a>
           
           <button
             onClick={() => navigate('/get-in-touch')}
