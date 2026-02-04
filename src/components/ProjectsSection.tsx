@@ -33,7 +33,7 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/aditireddy-d/Energy-Consumption-Predictor"
     },
     {
-      name: "COVID-19 Data Exploration",
+      name: "COVID-19 Data Exploration Tableau",
       description: "Performed comprehensive data cleaning using advanced Excel techniques, followed by exploratory data analysis using SQL queries. Showcased COVID-19 trends and vaccination impact in Tableau using multiple visualizations including bar charts and interactive maps.",
       skills: ["SQL", "Tableau", "Excel", "Data Cleaning", "Data Visualization"],
       image: getImagePath("/covid-project.png"),
