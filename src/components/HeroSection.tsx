@@ -11,7 +11,7 @@ const HeroSection = () => {
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
                 Hey there! I am <span className="text-blue-500">Aditi Reddy Doma</span> and welcome to my data story
-              </h1>
+                </h1>
             </div>
           </div>
           

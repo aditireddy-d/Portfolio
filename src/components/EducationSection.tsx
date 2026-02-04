@@ -52,11 +52,11 @@ const EducationSection = () => {
       
       <CardHeader className="pb-4 pl-8">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-          <div className="flex-1">
+                  <div className="flex-1">
             <div className="flex items-start gap-4 mb-4">
               {edu.logo && (
                 <div className="flex-shrink-0">
-                  <img 
+                        <img 
                     src={edu.logo} 
                     alt={`${edu.institution} logo`}
                     className="h-16 w-16 object-contain bg-white rounded-lg p-2 shadow-md border border-gray-200"
@@ -82,11 +82,11 @@ const EducationSection = () => {
                           <div className="flex items-center gap-2 text-slate-400">
                             <MapPin className="w-4 h-4" />
                             <span className="text-sm">{edu.location}</span>
-                          </div>
-                        </div>
-              </div>
-            </div>
-          </div>
+                  </div>
+                  </div>
+                </div>
+                      </div>
+                    </div>
           
                   <div className="flex flex-col items-end gap-2 text-right">
                     <div className="flex items-center gap-2 text-slate-300 bg-slate-800 px-4 py-2 rounded-lg border border-slate-700">
@@ -97,11 +97,11 @@ const EducationSection = () => {
                       <div className="flex items-center gap-2 text-slate-300 bg-slate-800 px-4 py-2 rounded-lg border border-slate-700">
                         <Award className="w-5 h-5 text-blue-500" />
                         <span className="font-semibold text-white">GPA: {edu.gpa}</span>
-                      </div>
+                  </div>
                     )}
                   </div>
-        </div>
-      </CardHeader>
+                </div>
+              </CardHeader>
       
               <CardContent className="pt-0 pl-8 pb-6">
                 <div className="space-y-4">
@@ -122,7 +122,7 @@ const EducationSection = () => {
                   </div>
                 </div>
               </CardContent>
-    </Card>
+            </Card>
   );
 
   return (
@@ -160,10 +160,10 @@ const EducationSection = () => {
               {renderEducationCard(educationData.bachelors)}
             </TabsContent>
           </Tabs>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+   );
+ };
 
-export default EducationSection; 
+ export default EducationSection; 

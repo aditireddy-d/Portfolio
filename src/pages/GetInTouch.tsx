@@ -67,14 +67,14 @@ const GetInTouch = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Get In Touch
-          </h1>
+            </h1>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-4">
             Ready to turn your data into insights?
-          </p>
+            </p>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Let's connect and discuss how I can help you with your data science and analytics needs.
-          </p>
+            </p>
         </div>
 
         {/* Contact Information Grid */}

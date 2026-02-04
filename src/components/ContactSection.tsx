@@ -15,9 +15,9 @@ const ContactSection = () => {
           </p>
           <div className="mt-8">
             <Button 
-              onClick={() => navigate('/get-in-touch')}
+            onClick={() => navigate('/get-in-touch')}
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-            >
+          >
               Contact Me
             </Button>
           </div>
