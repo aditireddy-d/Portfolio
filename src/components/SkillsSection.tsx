@@ -138,7 +138,7 @@ const SkillsSection = () => {
           {/* Tools & Technologies */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-white text-center">Tools & Technologies</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-9 gap-4 max-w-6xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
               {toolsAndTechnologies.map((tool, toolIndex) => (
                 <Card key={toolIndex} className="hover:shadow-md transition-all duration-300 hover:border-blue-500 border border-slate-800 h-32 bg-slate-900 relative overflow-hidden group">
                   <CardContent className="p-4 text-center relative z-10">

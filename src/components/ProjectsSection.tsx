@@ -13,8 +13,8 @@ const ProjectsSection = () => {
     },
     {
       name: "AutoConvo: Real-Time Driver Intent Detection",
-      description: "AutoConvo is a real-time speech-to-intent understanding pipeline designed for in-car assistance. It fuses OpenAI Whisper (ASR) for speech recognition with DistilBERT for natural language intent detection, optimized for NVIDIA Jetson Nano edge deployment using TensorRT. The system transcribes driver voice commands, classifies them into 7+ intent categories (navigate, play music, call contact, etc.), and maintains conversation context. Achieved 91.7% accuracy with TensorRT optimization reducing inference latency to ~385ms, enabling real-time edge operation. Built with Python, PyTorch, Transformers, ONNX Runtime, and TensorRT.",
-      skills: ["Python", "PyTorch", "NLP", "Whisper", "DistilBERT", "TensorRT", "Edge Computing", "Real-time Systems"],
+      description: "Designed a voice command system using Whisper ASR and DistilBERT to classify 40+ in-car voice commands at 92% accuracy. Optimized deployment on Jetson Nano with TensorRT and CUDA to handle real-time voice commands and deliver relevant responses via light-weight APIs.",
+      skills: ["Python", "PyTorch", "NLP", "Whisper", "DistilBERT", "TensorRT", "CUDA", "Edge Computing", "Real-time Systems", "API Development"],
       image: getImagePath("/autoconvo-car.png"),
       githubUrl: "https://github.com/aditireddy-d/AutoConvo-Real-Time-Driver-Intent-Detection"
     },
