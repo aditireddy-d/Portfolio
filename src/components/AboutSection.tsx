@@ -4,7 +4,7 @@ import linkedinLogo from "@/assets/linkedin-logo.svg";
 import { getImagePath } from "@/utils/imagePath";
 
 const AboutSection = () => {
-  const resumeUrl = getImagePath("/Aditi Reddy Doma_Resume.pdf");
+  const resumeUrl = getImagePath("/Resume_Aditi Reddy.pdf");
   console.log('Resume URL:', resumeUrl);
   
   return (

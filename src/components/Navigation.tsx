@@ -5,7 +5,7 @@ import { getImagePath } from '@/utils/imagePath';
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('about');
   const navigate = useNavigate();
-  const resumeUrl = getImagePath("/Aditi Reddy Doma_Resume.pdf");
+  const resumeUrl = getImagePath("/Resume_Aditi Reddy.pdf");
 
   useEffect(() => {
     const handleScroll = () => {
