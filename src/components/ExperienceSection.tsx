@@ -5,7 +5,7 @@ import { getImagePath } from "@/utils/imagePath";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "DATA SCIENCE INTERN",
+      title: "DATA SCIENCE RESEARCH INTERN",
       company: "icitizen",
       logo: getImagePath("/icitizen-logo.png"),
       period: "May 2025 - Present",
