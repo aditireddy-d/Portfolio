@@ -4,8 +4,7 @@ import linkedinLogo from "@/assets/linkedin-logo.svg";
 import { getImagePath } from "@/utils/imagePath";
 
 const AboutSection = () => {
-  const resumeUrl = getImagePath("/Resume_Aditi Reddy.pdf");
-  console.log('Resume URL:', resumeUrl);
+  const resumeUrl = getImagePath("/Resume_Aditi_Reddy_Doma.pdf") + "?v=2";
   
   return (
     <section id="about" className="py-20 bg-black relative overflow-hidden">

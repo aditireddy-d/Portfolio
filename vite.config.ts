@@ -4,7 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/Portfolio/",                            // matches repo name exactly
+  // Use repo base path only in production (GitHub Pages). In dev we want root (/).
+  base: mode === "production" ? "/Portfolio/" : "/",
   server: { host: "::", port: 8080 },
   build: { outDir: "dist", emptyOutDir: true },   // deploy from dist
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
