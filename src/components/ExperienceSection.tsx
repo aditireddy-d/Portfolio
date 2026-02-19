@@ -31,18 +31,17 @@ const ExperienceSection = () => {
       technologies: ["SQL", "Database Systems", "Teaching", "Data Modeling"]
     },
     {
-      title: "BUSINESS ANALYST INTERN",
+      title: "Data Analyst",
       company: "STANDARDWINGS TECHNOLOGIES PVT. LTD",
       logo: getImagePath("/standardwings-logo.png"),
-      period: "December 2023 - July 2024",
+      period: "August 2023 - August 2024",
       location: "Nashik, India",
       description: "",
       achievements: [
-        "Documented client requirements by collaborating with 15+ cross-functional team members and attending client meetings.",
-        "Extracted actionable insights from 20,000+ rows of patient data using Pandas, which contributed to the design of an application that improved patient onboarding and streamlined appointment scheduling.",
-        "Presented the application functionality to technical and non-technical stakeholders using clear MS PowerPoint decks."
+        "Extracted, cleaned and integrated multi-source data (GPS, sensor, Salesforce CRM, SAP, Excel) from 120+ vehicles into AWS S3 using SQL and Python, enabling detailed fleet analysis that uncovered significant operational cost savings.",
+        "Collaborated with cross-functional teams throughout the project lifecycle to define 21 key KPIs aligned with business objectives."
       ],
-      technologies: ["Pandas", "MS Excel", "MS PowerPoint", "Data Analysis", "Client Collaboration"]
+      technologies: ["AWS S3", "SQL", "Python", "Salesforce", "SAP", "Excel", "Data Integration", "Fleet Analytics"]
     },
     {
       title: "MACHINE LEARNING & DATA ANALYST INTERN",
