@@ -44,10 +44,10 @@ const ExperienceSection = () => {
       technologies: ["AWS S3", "SQL", "Python", "Salesforce", "SAP", "Excel", "Data Integration", "Fleet Analytics"]
     },
     {
-      title: "MACHINE LEARNING & DATA ANALYST INTERN",
+      title: "Machine Learning Intern",
       company: "CLOUD4C",
       logo: `${getImagePath("/cloud4c-logo.png")}?v=1`,
-      period: "June 2023 - August 2023",
+      period: "June 2023 - July 2023",
       location: "Hyderabad, India",
       description: "",
       achievements: [
