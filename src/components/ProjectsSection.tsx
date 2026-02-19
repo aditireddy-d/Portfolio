@@ -12,13 +12,6 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/aditireddy-d/IOT-Telemetry-Analytics-for-Health-Monitoring-Devices"
     },
     {
-      name: "AutoConvo: Real-Time Driver Intent Detection",
-      description: "AutoConvo is a real-time speech-to-intent understanding pipeline designed for in-car assistance. It fuses OpenAI Whisper (ASR) for speech recognition with DistilBERT for natural language intent detection, optimized for NVIDIA Jetson Nano edge deployment using TensorRT. The system transcribes driver voice commands, classifies them into 7+ intent categories (navigate, play music, call contact, etc.), and maintains conversation context. Achieved 91.7% accuracy with TensorRT optimization reducing inference latency to ~385ms, enabling real-time edge operation. Built with Python, PyTorch, Transformers, ONNX Runtime, and TensorRT.",
-      skills: ["Python", "PyTorch", "NLP", "Whisper", "DistilBERT", "TensorRT", "Edge Computing", "Real-time Systems"],
-      image: getImagePath("/autoconvo-car.png"),
-      githubUrl: "https://github.com/aditireddy-d/AutoConvo-Real-Time-Driver-Intent-Detection"
-    },
-    {
       name: "Portfolio Allocation Model",
       description: "Developed a data-driven investment strategy comparing Buy & Hold, Momentum Trading, and the S&P 500 benchmark across 9 diversified stocks from consumer, tech, and industrial sectors. Simulated 5-year stock returns using Monte Carlo analysis and applied Mean-Variance Optimization with Pyomo to identify the optimal allocation under risk constraints.",
       skills: ["Python", "Pandas", "Financial Modeling", "Risk Management", "Matplotlib", "Monte Carlo"],

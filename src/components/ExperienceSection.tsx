@@ -9,7 +9,7 @@ const ExperienceSection = () => {
       company: "icitizen",
       logo: getImagePath("/icitizen-logo.png"),
       period: "May 2025 - Present",
-      location: "Remote, USA",
+      location: "Rochester, NY",
       description: "",
       achievements: [
         "Web scraped and analyzed 500K+ unstructured congressional profiles from Congress.gov and Bioguide websites using APIs, transforming unstructured data into structured datasets stored in AWS DynamoDB for real-time updates.",
