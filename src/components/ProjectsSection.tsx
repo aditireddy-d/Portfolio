@@ -36,14 +36,14 @@ const ProjectsSection = () => {
       name: "Brand Logo Classification",
       description: "Reduced classification time by 60% and improved accuracy by 20% by implementing a Convolutional Neural Network (CNN) classification system with transfer learning capabilities to categorize brand logos. Utilized VGG16 architecture and fine-tuning techniques to classify 10 unique brand logos with high precision.",
       skills: ["Python", "TensorFlow", "Keras", "CNN", "Transfer Learning", "VGG16", "Deep Learning", "Computer Vision"],
-      image: getImagePath("/placeholder.svg"),
+      image: getImagePath("/CNN.png"),
       githubUrl: "https://github.com/aditireddy-d/Brand-Logo-Classification"
     },
     {
       name: "Prime Video Dashboard",
       description: "Power BI dashboard to monitor and visualize Amazon Prime Video's content distribution, analyzing viewer demographics, content ratings, and genre trends. Developed comprehensive visualizations including total titles, ratings distribution, genre popularity, content distribution by country, and content release trends over time.",
       skills: ["Power BI", "Data Visualization", "Business Intelligence", "DAX", "Dashboard Design", "Content Analytics"],
-      image: getImagePath("/placeholder.svg"),
+      image: getImagePath("/pOWERbi.png"),
       githubUrl: "https://github.com/aditireddy-d/Prime-Video-Dashboard"
     },
 
