@@ -46,16 +46,16 @@ const ExperienceSection = () => {
     },
     {
       title: "Data Analyst",
-      company: "STANDARDWINGS TECHNOLOGIES PVT. LTD",
+      company: "StandardWings Technologies Pvt. Ltd.",
       logo: getImagePath("/standardwings-logo.png"),
       period: "August 2023 - August 2024",
       location: "Nashik, India",
       description: "",
       achievements: [
-        "Extracted, cleaned and integrated multi-source data (GPS, sensor, Salesforce CRM, SAP, Excel) from 120+ vehicles into AWS S3 using SQL and Python, enabling detailed fleet analysis that uncovered significant operational cost savings.",
+        "Extracted, cleaned and integrated multi-source data (GPS, sensor, Salesforce CRM, SAP, Excel) from 120+ vehicles into AWS S3 using SQL and Python, enabling detailed fleet analysis in Power BI that uncovered significant operational cost savings.",
         "Collaborated with cross-functional teams throughout the project lifecycle to define 21 key KPIs aligned with business objectives."
       ],
-      technologies: ["AWS S3", "SQL", "Python", "Salesforce", "SAP", "Excel", "Data Integration", "Fleet Analytics"]
+      technologies: ["AWS S3", "SQL", "Python", "Power BI", "Salesforce", "SAP", "Excel", "Data Integration", "Fleet Analytics"]
     },
     {
       title: "Machine Learning Intern",
