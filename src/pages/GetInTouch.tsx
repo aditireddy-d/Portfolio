@@ -1,11 +1,9 @@
-import { Mail, Phone, Linkedin, Github, ArrowLeft, FileText } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { getImagePath } from "@/utils/imagePath";
 
 const GetInTouch = () => {
   const navigate = useNavigate();
-  const resumeUrl = getImagePath("/Resume_Aditi_Reddy_Doma.pdf") + "?v=2";
 
   const contactInfo = [
     {
@@ -39,13 +37,6 @@ const GetInTouch = () => {
       title: "GitHub",
       content: "Check out my code repositories",
       link: "https://github.com/aditireddy-d",
-      color: "text-blue-500"
-    },
-    {
-      icon: FileText,
-      title: "Resume",
-      content: "View or download my resume",
-      link: resumeUrl,
       color: "text-blue-500"
     }
   ];

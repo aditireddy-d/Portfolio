@@ -5,6 +5,20 @@ import { getImagePath } from "@/utils/imagePath";
 const ExperienceSection = () => {
   const experiences = [
     {
+      title: "Digital Engineering Intern",
+      company: "Johnson Controls",
+      logo: getImagePath("/johnson-controls-logo.png"),
+      period: "May 2026 - Present",
+      location: "Pennsylvania",
+      description: "",
+      achievements: [
+        "Partnering with maintenance, quality, and engineering teams to gather requirements and define key performance indicators (KPIs) for chiller (industrial HVAC) reliability monitoring.",
+        "Extracting chiller sensor data from Microsoft Fabric using KQL and Python into Snowflake via ETL workflows for centralized data.",
+        "Developing initial Tableau dashboards to translate raw sensor readings into insights for cross-functional teams."
+      ],
+      technologies: ["Microsoft Fabric", "KQL", "Python", "Snowflake", "ETL", "Tableau", "KPI Development"]
+    },
+    {
       title: "Data Science Researcher",
       company: "icitizen",
       logo: getImagePath("/icitizen-logo.png"),

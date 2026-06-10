@@ -1,17 +1,15 @@
-// Utility function to handle asset paths for both dev (/) and GitHub Pages (/Portfolio/).
-export const getImagePath = (assetPath: string): string => {
-  const baseUrl = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, ""); // "/Portfolio" or ""
-
-  // If already prefixed with baseUrl, return as-is
-  if (baseUrl && assetPath.startsWith(`${baseUrl}/`)) {
-    return assetPath;
+// Utility function to handle image paths for GitHub Pages deployment
+export const getImagePath = (imagePath: string): string => {
+  // If the path already starts with the base path, return as is
+  if (imagePath.startsWith('/Portfolio/')) {
+    return imagePath;
   }
-
-  // Absolute path: "/foo.png" -> "/Portfolio/foo.png" (prod) OR "/foo.png" (dev)
-  if (assetPath.startsWith("/")) {
-    return `${baseUrl}${assetPath}`;
+  
+  // If it's an absolute path starting with '/', add the base path
+  if (imagePath.startsWith('/')) {
+    return `/Portfolio${imagePath}`;
   }
-
-  // Relative path: "foo.png" -> "/Portfolio/foo.png" (prod) OR "/foo.png" (dev)
-  return `${baseUrl}/${assetPath}`;
+  
+  // For relative paths, return as is
+  return imagePath;
 };
