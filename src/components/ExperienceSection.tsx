@@ -20,17 +20,17 @@ const ExperienceSection = () => {
     },
     {
       title: "Data Science Researcher",
-      company: "icitizen",
+      company: "iCitizen",
       logo: getImagePath("/icitizen-logo.png"),
-      period: "May 2025 - Present",
-      location: "Rochester, NY",
+      period: "May 2025 - April 2026",
+      location: "Rochester, New York",
       description: "",
       achievements: [
         "Web scraped and analyzed 500K+ unstructured congressional profiles from Congress.gov and Bioguide websites using APIs, transforming unstructured data into structured datasets stored in AWS DynamoDB for real-time updates.",
         "Designed a dynamic U.S. map using D3.js, visualizing senators, their sponsored bills and co-sponsors by state.",
-        "Increased user engagement by 27.2% on the iCitizen app by developing a chatbot predicting likelihood of a bill becoming law."
+        "Increased user engagement by 27.2% on the iCitizen app by building a RAG-based LLM chatbot for political affairs."
       ],
-      technologies: ["AWS", "DynamoDB", "D3.js", "Web Scraping", "Data Engineering", "Chatbot Development", "Data Visualization"]
+      technologies: ["AWS", "DynamoDB", "D3.js", "Web Scraping", "Data Engineering", "RAG", "LLM", "Data Visualization"]
     },
     {
       title: "GRADUATE TEACHING ASSISTANT",
