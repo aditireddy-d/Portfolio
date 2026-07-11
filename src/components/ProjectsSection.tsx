@@ -1,63 +1,123 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getImagePath } from "@/utils/imagePath";
 
+type Project = {
+  name: string;
+  description: string;
+  skills: string[];
+  image: string;
+  githubUrl: string;
+  category: "analytics" | "ai-ml";
+};
+
 const ProjectsSection = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       name: "IoT Telemetry Analytics for Health Monitoring Devices",
       description: "Built a data pipeline using Kafka + PySpark to process 2M+ IoT telemetry records from health devices (glucose, heart-rate). Reduced false alarms by 18% by fine-tuning anomaly detection models (Isolation Forest, ARIMA) for abnormal health data.",
       skills: ["Kafka", "PySpark", "Data Engineering", "Isolation Forest", "ARIMA", "Anomaly Detection", "IoT", "Healthcare Analytics"],
       image: getImagePath("/iot-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/IOT-Telemetry-Analytics-for-Health-Monitoring-Devices"
+      githubUrl: "https://github.com/aditireddy-d/IOT-Telemetry-Analytics-for-Health-Monitoring-Devices",
+      category: "analytics"
     },
     {
       name: "Portfolio Allocation Model",
       description: "Developed a data-driven investment strategy comparing Buy & Hold, Momentum Trading, and the S&P 500 benchmark across 9 diversified stocks from consumer, tech, and industrial sectors. Simulated 5-year stock returns using Monte Carlo analysis and applied Mean-Variance Optimization with Pyomo to identify the optimal allocation under risk constraints.",
       skills: ["Python", "Pandas", "Financial Modeling", "Risk Management", "Matplotlib", "Monte Carlo"],
       image: getImagePath("/stocks-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Investing_Stocks_Strategy"
+      githubUrl: "https://github.com/aditireddy-d/Investing_Stocks_Strategy",
+      category: "analytics"
     },
     {
       name: "Energy Consumption Forecasting",
       description: "Analyzed energy use in 5,700+ South Carolina homes to predict summer demand spikes. Built time-series linear regression models using hourly energy usage, weather data, and building metadata. Created an interactive Shiny dashboard to guide energy-saving strategies and prevent blackouts with 75-85% accuracy.",
       skills: ["R", "Shiny", "ggplot2", "Time Series", "Regression", "Energy Analytics"],
       image: getImagePath("/energy-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Energy-Consumption-Predictor"
+      githubUrl: "https://github.com/aditireddy-d/Energy-Consumption-Predictor",
+      category: "analytics"
     },
     {
       name: "COVID-19 Data Exploration Tableau",
       description: "Performed comprehensive data cleaning using advanced Excel techniques, followed by exploratory data analysis using SQL queries. Showcased COVID-19 trends and vaccination impact in Tableau using multiple visualizations including bar charts and interactive maps.",
       skills: ["SQL", "Tableau", "Excel", "Data Cleaning", "Data Visualization"],
       image: getImagePath("/covid-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Covid-19-Data-Exploration"
+      githubUrl: "https://github.com/aditireddy-d/Covid-19-Data-Exploration",
+      category: "analytics"
     },
     {
       name: "Brand Logo Classification",
       description: "Reduced classification time by 60% and improved accuracy by 20% by implementing a Convolutional Neural Network (CNN) classification system with transfer learning capabilities to categorize brand logos. Utilized VGG16 architecture and fine-tuning techniques to classify 10 unique brand logos with high precision.",
       skills: ["Python", "TensorFlow", "Keras", "CNN", "Transfer Learning", "VGG16", "Deep Learning", "Computer Vision"],
       image: getImagePath("/CNN.png"),
-      githubUrl: "https://github.com/aditireddy-d/Brand-Logo-Classification"
+      githubUrl: "https://github.com/aditireddy-d/Brand-Logo-Classification",
+      category: "ai-ml"
     },
     {
       name: "Prime Video Dashboard",
       description: "Power BI dashboard to monitor and visualize Amazon Prime Video's content distribution, analyzing viewer demographics, content ratings, and genre trends. Developed comprehensive visualizations including total titles, ratings distribution, genre popularity, content distribution by country, and content release trends over time.",
       skills: ["Power BI", "Data Visualization", "Business Intelligence", "DAX", "Dashboard Design", "Content Analytics"],
       image: getImagePath("/pOWERbi.png"),
-      githubUrl: "https://github.com/aditireddy-d/Prime-Video-Dashboard"
+      githubUrl: "https://github.com/aditireddy-d/Prime-Video-Dashboard",
+      category: "analytics"
     },
-
   ];
 
+  const analyticsProjects = projects.filter((project) => project.category === "analytics");
+  const aiMlProjects = projects.filter((project) => project.category === "ai-ml");
 
-  const handleProjectClick = (project: any) => {
+  const handleProjectClick = (project: Project) => {
     if (project.githubUrl) {
-      window.open(project.githubUrl, '_blank');
+      window.open(project.githubUrl, "_blank");
     }
   };
 
-  // Debug: Log the image paths
-  console.log('Project images:', projects.map(p => ({ name: p.name, image: p.image })));
+  const renderProjectGrid = (projectList: Project[]) => (
+    <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      {projectList.map((project, index) => (
+        <Card
+          key={index}
+          className={`hover:shadow-lg transition-all duration-300 group bg-slate-900 border border-slate-800 hover:border-blue-500 h-[40rem] flex flex-col overflow-hidden ${project.githubUrl ? "cursor-pointer" : ""}`}
+          onClick={() => handleProjectClick(project)}
+        >
+          <CardHeader className="pb-3 flex-shrink-0 px-4 pt-4">
+            <CardTitle className="text-lg text-white group-hover:text-blue-500 transition-colors line-clamp-2 font-semibold">
+              {project.name}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-0 flex flex-col flex-1 min-h-0 px-4 pb-4">
+            <div className="w-full h-48 mb-4 bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-slate-700 hover:shadow-md transition-all duration-300 p-2 flex-shrink-0">
+              <img
+                src={project.image}
+                alt={`${project.name} - Project Image`}
+                className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                style={{ maxWidth: "100%", maxHeight: "100%" }}
+                onError={(e) => {
+                  e.currentTarget.src = getImagePath("/placeholder.svg");
+                  e.currentTarget.alt = "Project Image Placeholder";
+                }}
+              />
+            </div>
+            <p className="text-slate-300 mb-4 text-sm leading-relaxed line-clamp-5 overflow-hidden text-ellipsis flex-shrink">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 flex-shrink-0 mt-auto">
+              {project.skills.map((skill, skillIndex) => (
+                <Badge
+                  key={skillIndex}
+                  variant="secondary"
+                  className="text-xs font-medium px-3 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-colors"
+                >
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
 
   return (
     <section id="projects" className="py-20 bg-black relative overflow-hidden">
@@ -66,53 +126,31 @@ const ProjectsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Projects</h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              className={`hover:shadow-lg transition-all duration-300 group bg-slate-900 border border-slate-800 hover:border-blue-500 h-[40rem] flex flex-col overflow-hidden ${project.githubUrl ? 'cursor-pointer' : ''}`}
-              onClick={() => handleProjectClick(project)}
+
+        <Tabs defaultValue="analytics" className="w-full">
+          <TabsList className="mx-auto mb-12 flex w-fit bg-slate-900 border border-slate-800 p-1">
+            <TabsTrigger
+              value="analytics"
+              className="px-6 py-2 text-slate-300 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
             >
-              <CardHeader className="pb-3 flex-shrink-0 px-4 pt-4">
-                <CardTitle className="text-lg text-white group-hover:text-blue-500 transition-colors line-clamp-2 font-semibold">
-                  {project.name}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 flex flex-col flex-1 min-h-0 px-4 pb-4">
-                <div className="w-full h-48 mb-4 bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-slate-700 hover:shadow-md transition-all duration-300 p-2 flex-shrink-0">
-                  <img 
-                    src={project.image} 
-                    alt={`${project.name} - Project Image`}
-                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                    style={{ maxWidth: '100%', maxHeight: '100%' }}
-                    onError={(e) => {
-                      console.error('Failed to load project image:', project.image);
-                      // Show a fallback placeholder
-                      e.currentTarget.src = getImagePath("/placeholder.svg");
-                      e.currentTarget.alt = "Project Image Placeholder";
-                    }}
-                    onLoad={() => console.log('Successfully loaded project image:', project.image)}
-                  />
-                </div>
-                <p className="text-slate-300 mb-4 text-sm leading-relaxed line-clamp-5 overflow-hidden text-ellipsis flex-shrink">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 flex-shrink-0 mt-auto">
-                  {project.skills.map((skill, skillIndex) => (
-                    <Badge 
-                      key={skillIndex} 
-                      variant="secondary"
-                      className="text-xs font-medium px-3 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-colors"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+              Analytics Projects
+            </TabsTrigger>
+            <TabsTrigger
+              value="ai-ml"
+              className="px-6 py-2 text-slate-300 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
+            >
+              AI/ML Projects
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="analytics">
+            {renderProjectGrid(analyticsProjects)}
+          </TabsContent>
+
+          <TabsContent value="ai-ml">
+            {renderProjectGrid(aiMlProjects)}
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );
