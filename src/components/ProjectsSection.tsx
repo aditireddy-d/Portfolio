@@ -62,6 +62,22 @@ const ProjectsSection = () => {
       githubUrl: "https://github.com/aditireddy-d/Prime-Video-Dashboard",
       category: "analytics"
     },
+    {
+      name: "Telecom Customer Churn Analysis",
+      description: "Analyzed telecom customer data to identify key drivers of churn and retention patterns. Built predictive models and visualizations to segment at-risk customers and uncover service, billing, and contract factors influencing customer attrition.",
+      skills: ["Python", "Pandas", "Data Analysis", "Churn Prediction", "Data Visualization", "Customer Analytics"],
+      image: getImagePath("/telecom-churn-project.png"),
+      githubUrl: "https://github.com/aditireddy-d/Telecom-Customer-Churn-Analysis",
+      category: "analytics"
+    },
+    {
+      name: "E-commerce A/B Testing",
+      description: "Designed and evaluated A/B tests on e-commerce user behavior to measure the impact of product and UX changes on conversion and engagement. Applied statistical testing to compare control and treatment groups and deliver data-driven recommendations.",
+      skills: ["Python", "A/B Testing", "Statistical Analysis", "E-commerce Analytics", "Hypothesis Testing", "Data Visualization"],
+      image: getImagePath("/ecommerce-ab-testing.png"),
+      githubUrl: "https://github.com/aditireddy-d/E-commerce-A-B-Testing",
+      category: "analytics"
+    },
   ];
 
   const analyticsProjects = projects.filter((project) => project.category === "analytics");
