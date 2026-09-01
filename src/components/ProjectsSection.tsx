@@ -1,171 +1,200 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getImagePath } from "@/utils/imagePath";
 
 type Project = {
+  number: string;
+  category: string;
   name: string;
   description: string;
+  metrics: { value: string; label: string }[];
   skills: string[];
   image: string;
-  githubUrl: string;
-  category: "analytics" | "ai-ml";
+  projectUrl: string;
+  tab: "data" | "data-visualization";
 };
 
 const ProjectsSection = () => {
   const projects: Project[] = [
     {
-      name: "IoT Telemetry Analytics for Health Monitoring Devices",
-      description: "Built a data pipeline using Kafka + PySpark to process 2M+ IoT telemetry records from health devices (glucose, heart-rate). Reduced false alarms by 18% by fine-tuning anomaly detection models (Isolation Forest, ARIMA) for abnormal health data.",
-      skills: ["Kafka", "PySpark", "Data Engineering", "Isolation Forest", "ARIMA", "Anomaly Detection", "IoT", "Healthcare Analytics"],
-      image: getImagePath("/iot-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/IOT-Telemetry-Analytics-for-Health-Monitoring-Devices",
-      category: "analytics"
+      number: "01",
+      category: "Data Platform",
+      name: "E-commerce Data Platform",
+      description:
+        "A unified hybrid data and AI platform for AetherMart e-commerce, combining MariaDB Galera clusters, MongoDB, vector search, semantic retrieval, and real-time synchronization.",
+      metrics: [
+        { value: "6", label: "milestones" },
+        { value: "Hybrid", label: "SQL + NoSQL stack" },
+        { value: "Semantic", label: "product search" },
+      ],
+      skills: ["Python", "MariaDB", "MongoDB", "AWS", "ETL", "Semantic Search", "Vector Database"],
+      image: getImagePath("/ecommerce-data-platform.png"),
+      projectUrl: "https://github.com/aditireddy-d/E-commerce-Data-Platform",
+      tab: "data",
     },
     {
-      name: "Portfolio Allocation Model",
-      description: "Developed a data-driven investment strategy comparing Buy & Hold, Momentum Trading, and the S&P 500 benchmark across 9 diversified stocks from consumer, tech, and industrial sectors. Simulated 5-year stock returns using Monte Carlo analysis and applied Mean-Variance Optimization with Pyomo to identify the optimal allocation under risk constraints.",
-      skills: ["Python", "Pandas", "Financial Modeling", "Risk Management", "Matplotlib", "Monte Carlo"],
-      image: getImagePath("/stocks-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Investing_Stocks_Strategy",
-      category: "analytics"
+      number: "01",
+      category: "Data Visualization",
+      name: "Data Visualization Portfolio",
+      description:
+        "Documented and presented data visualization work including dashboard design, analytical storytelling, and business insights delivered through interactive visual reports.",
+      metrics: [
+        { value: "Multi", label: "dashboard formats" },
+        { value: "Story", label: "driven insights" },
+        { value: "Business", label: "focused reporting" },
+      ],
+      skills: ["Data Visualization", "Dashboard Design", "Business Intelligence", "Analytics"],
+      image: getImagePath("/data-visualization-portfolio.png"),
+      projectUrl:
+        "https://docs.google.com/document/d/1-ODEmgAwkIoBTmb37COSZYVaAH4D8Y1gR-4RMj9KvhY/edit?tab=t.0#heading=h.9z5k0xnfvw8b",
+      tab: "data-visualization",
     },
     {
-      name: "Energy Consumption Forecasting",
-      description: "Analyzed energy use in 5,700+ South Carolina homes to predict summer demand spikes. Built time-series linear regression models using hourly energy usage, weather data, and building metadata. Created an interactive Shiny dashboard to guide energy-saving strategies and prevent blackouts with 75-85% accuracy.",
-      skills: ["R", "Shiny", "ggplot2", "Time Series", "Regression", "Energy Analytics"],
-      image: getImagePath("/energy-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Energy-Consumption-Predictor",
-      category: "analytics"
+      number: "02",
+      category: "Healthcare Analytics",
+      name: "Health Care Looker Project",
+      description:
+        "Healthcare analytics dashboards in Looker to explore patient and operational metrics, enabling stakeholders to monitor trends and support data-driven decision making.",
+      metrics: [
+        { value: "Looker", label: "dashboards" },
+        { value: "Healthcare", label: "domain focus" },
+        { value: "KPI", label: "monitoring" },
+      ],
+      skills: ["Looker", "Healthcare Analytics", "SQL", "Data Modeling", "Dashboard Design"],
+      image: getImagePath("/healthcare-looker-project.png"),
+      projectUrl: "https://github.com/aditireddy-d/Health-Care-Looker-Project",
+      tab: "data-visualization",
     },
     {
-      name: "COVID-19 Data Exploration Tableau",
-      description: "Performed comprehensive data cleaning using advanced Excel techniques, followed by exploratory data analysis using SQL queries. Showcased COVID-19 trends and vaccination impact in Tableau using multiple visualizations including bar charts and interactive maps.",
-      skills: ["SQL", "Tableau", "Excel", "Data Cleaning", "Data Visualization"],
-      image: getImagePath("/covid-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Covid-19-Data-Exploration",
-      category: "analytics"
-    },
-    {
-      name: "Brand Logo Classification",
-      description: "Reduced classification time by 60% and improved accuracy by 20% by implementing a Convolutional Neural Network (CNN) classification system with transfer learning capabilities to categorize brand logos. Utilized VGG16 architecture and fine-tuning techniques to classify 10 unique brand logos with high precision.",
-      skills: ["Python", "TensorFlow", "Keras", "CNN", "Transfer Learning", "VGG16", "Deep Learning", "Computer Vision"],
-      image: getImagePath("/CNN.png"),
-      githubUrl: "https://github.com/aditireddy-d/Brand-Logo-Classification",
-      category: "ai-ml"
-    },
-    {
-      name: "Prime Video Dashboard",
-      description: "Power BI dashboard to monitor and visualize Amazon Prime Video's content distribution, analyzing viewer demographics, content ratings, and genre trends. Developed comprehensive visualizations including total titles, ratings distribution, genre popularity, content distribution by country, and content release trends over time.",
-      skills: ["Power BI", "Data Visualization", "Business Intelligence", "DAX", "Dashboard Design", "Content Analytics"],
-      image: getImagePath("/pOWERbi.png"),
-      githubUrl: "https://github.com/aditireddy-d/Prime-Video-Dashboard",
-      category: "analytics"
-    },
-    {
-      name: "Telecom Customer Churn Analysis",
-      description: "Analyzed telecom customer data to identify key drivers of churn and retention patterns. Built predictive models and visualizations to segment at-risk customers and uncover service, billing, and contract factors influencing customer attrition.",
-      skills: ["Python", "Pandas", "Data Analysis", "Churn Prediction", "Data Visualization", "Customer Analytics"],
-      image: getImagePath("/telecom-churn-project.png"),
-      githubUrl: "https://github.com/aditireddy-d/Telecom-Customer-Churn-Analysis",
-      category: "analytics"
-    },
-    {
-      name: "E-commerce A/B Testing",
-      description: "Designed and evaluated A/B tests on e-commerce user behavior to measure the impact of product and UX changes on conversion and engagement. Applied statistical testing to compare control and treatment groups and deliver data-driven recommendations.",
-      skills: ["Python", "A/B Testing", "Statistical Analysis", "E-commerce Analytics", "Hypothesis Testing", "Data Visualization"],
-      image: getImagePath("/ecommerce-ab-testing.png"),
-      githubUrl: "https://github.com/aditireddy-d/E-commerce-A-B-Testing",
-      category: "analytics"
+      number: "03",
+      category: "Higher Education Analytics",
+      name: "RIT Tableau Dashboard",
+      description:
+        "Interactive Tableau dashboard analyzing RIT enrollment, admissions, diversity, and academic program trends to communicate institutional insights.",
+      metrics: [
+        { value: "5+", label: "datasets" },
+        { value: "Tableau", label: "dashboards" },
+        { value: "Enrollment", label: "trend analysis" },
+      ],
+      skills: ["Tableau", "Data Visualization", "Higher Education Analytics", "Data Analysis"],
+      image: getImagePath("/rit-tableau-project.png"),
+      projectUrl: "https://github.com/aditireddy-d/RIT-Tableau",
+      tab: "data-visualization",
     },
   ];
 
-  const analyticsProjects = projects.filter((project) => project.category === "analytics");
-  const aiMlProjects = projects.filter((project) => project.category === "ai-ml");
+  const dataProjects = projects.filter((project) => project.tab === "data");
+  const dataVisualizationProjects = projects.filter((project) => project.tab === "data-visualization");
 
-  const handleProjectClick = (project: Project) => {
-    if (project.githubUrl) {
-      window.open(project.githubUrl, "_blank");
-    }
-  };
+  const renderProjectList = (projectList: Project[]) => (
+    <div className="space-y-16">
+      {projectList.map((project, index) => {
+        const imageFirst = index % 2 === 0;
 
-  const renderProjectGrid = (projectList: Project[]) => (
-    <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
-      {projectList.map((project, index) => (
-        <Card
-          key={index}
-          className={`hover:shadow-lg transition-all duration-300 group bg-slate-900 border border-slate-800 hover:border-blue-500 h-[40rem] flex flex-col overflow-hidden ${project.githubUrl ? "cursor-pointer" : ""}`}
-          onClick={() => handleProjectClick(project)}
-        >
-          <CardHeader className="pb-3 flex-shrink-0 px-4 pt-4">
-            <CardTitle className="text-lg text-white group-hover:text-blue-500 transition-colors line-clamp-2 font-semibold">
-              {project.name}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="pt-0 flex flex-col flex-1 min-h-0 px-4 pb-4">
-            <div className="w-full h-48 mb-4 bg-slate-800 rounded-lg flex items-center justify-center overflow-hidden shadow-sm border border-slate-700 hover:shadow-md transition-all duration-300 p-2 flex-shrink-0">
-              <img
-                src={project.image}
-                alt={`${project.name} - Project Image`}
-                className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
-                onError={(e) => {
-                  e.currentTarget.src = getImagePath("/placeholder.svg");
-                  e.currentTarget.alt = "Project Image Placeholder";
-                }}
-              />
+        return (
+          <article
+            key={project.name}
+            className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14"
+          >
+            <div className={`${imageFirst ? "lg:order-1" : "lg:order-2"}`}>
+              <div className="overflow-hidden rounded-[1.5rem] border border-[#e7e2db] bg-white p-3 shadow-[0_12px_40px_rgba(17,24,39,0.08)]">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="h-[22rem] w-full rounded-[1.1rem] object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = getImagePath("/placeholder.svg");
+                  }}
+                />
+              </div>
             </div>
-            <p className="text-slate-300 mb-4 text-sm leading-relaxed line-clamp-5 overflow-hidden text-ellipsis flex-shrink">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2 flex-shrink-0 mt-auto">
-              {project.skills.map((skill, skillIndex) => (
-                <Badge
-                  key={skillIndex}
-                  variant="secondary"
-                  className="text-xs font-medium px-3 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 transition-colors"
+
+            <div className={`space-y-6 ${imageFirst ? "lg:order-2" : "lg:order-1"}`}>
+              <p className="portfolio-label">
+                {project.number} {project.category}
+              </p>
+              <h3 className="font-serif text-3xl leading-tight text-[#111827] md:text-4xl">{project.name}</h3>
+              <p className="max-w-xl text-sm leading-7 text-[#4b5563]">{project.description}</p>
+
+              <div className="grid max-w-lg grid-cols-3 gap-4 border-y border-[#e7e2db] py-5">
+                {project.metrics.map((metric) => (
+                  <div key={metric.label}>
+                    <p className="text-lg font-semibold text-[#111827]">{metric.value}</p>
+                    <p className="mt-1 text-xs text-[#6b7280]">{metric.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {project.skills.map((skill) => (
+                  <span key={skill} className="portfolio-tag">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={project.projectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="portfolio-button-primary"
                 >
-                  {skill}
-                </Badge>
-              ))}
+                  View project
+                </a>
+                {project.projectUrl.includes("github.com") && (
+                  <a
+                    href={project.projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-[#111827] hover:underline"
+                  >
+                    GitHub
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                )}
+              </div>
             </div>
-          </CardContent>
-        </Card>
-      ))}
+          </article>
+        );
+      })}
     </div>
   );
 
   return (
-    <section id="projects" className="py-20 bg-black relative overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Projects</h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+    <section id="projects" className="portfolio-section bg-white">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="portfolio-divider pb-10">
+          <div className="mb-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="portfolio-label mb-3">02 · Projects</p>
+              <h2 className="portfolio-title max-w-3xl">Selected data and visualization work.</h2>
+            </div>
+            <p className="max-w-md text-sm leading-6 text-[#5b6472]">
+              Data engineering platforms, healthcare dashboards, and analytics projects spanning SQL, cloud pipelines,
+              and BI tools.
+            </p>
+          </div>
         </div>
 
-        <Tabs defaultValue="analytics" className="w-full">
-          <TabsList className="mx-auto mb-12 flex w-fit bg-slate-900 border border-slate-800 p-1">
+        <Tabs defaultValue="data" className="w-full">
+          <TabsList className="mb-12 flex h-auto w-fit gap-2 rounded-full border border-[#e7e2db] bg-[#f7f6f3] p-1">
             <TabsTrigger
-              value="analytics"
-              className="px-6 py-2 text-slate-300 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
+              value="data"
+              className="rounded-full px-5 py-2 text-sm text-[#5b6472] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
             >
-              Analytics Projects
+              Data Projects
             </TabsTrigger>
             <TabsTrigger
-              value="ai-ml"
-              className="px-6 py-2 text-slate-300 data-[state=active]:bg-blue-500 data-[state=active]:text-white"
+              value="data-visualization"
+              className="rounded-full px-5 py-2 text-sm text-[#5b6472] data-[state=active]:bg-[#111827] data-[state=active]:text-white"
             >
-              AI/ML Projects
+              Data Visualization Projects
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="analytics">
-            {renderProjectGrid(analyticsProjects)}
-          </TabsContent>
-
-          <TabsContent value="ai-ml">
-            {renderProjectGrid(aiMlProjects)}
-          </TabsContent>
+          <TabsContent value="data">{renderProjectList(dataProjects)}</TabsContent>
+          <TabsContent value="data-visualization">{renderProjectList(dataVisualizationProjects)}</TabsContent>
         </Tabs>
       </div>
     </section>

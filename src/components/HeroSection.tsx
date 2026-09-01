@@ -1,30 +1,61 @@
-import heroImage from "@/assets/hero-image.jpg";
+import { ArrowUpRight } from "lucide-react";
 import { getImagePath } from "@/utils/imagePath";
+
 const profilePhoto = getImagePath("/profile-photo.jpg");
+const resumeUrl = getImagePath("/Resume_Aditi_Reddy_Doma.pdf");
 
 const HeroSection = () => {
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="min-h-screen flex items-center bg-black pt-20 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                Hey there! I am <span className="text-blue-500">Aditi Reddy Doma</span> and welcome to my data story
-                </h1>
-            </div>
+    <section id="hero" className="portfolio-section pt-32 md:pt-36">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="space-y-8">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#5b6472]">
+            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            Johnson Controls · Digital Engineering Intern
           </div>
-          
-          <div className="relative">
-            <div className="bg-slate-900 rounded-2xl shadow-xl p-6 h-[650px] flex items-center justify-center border border-slate-800">
-              <div className="w-full h-full rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src={profilePhoto} 
-                  alt="Aditi Reddy Doma"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+
+          <div className="space-y-4">
+            <h1 className="portfolio-title">Aditi Reddy Doma</h1>
+            <p className="max-w-xl text-lg font-medium leading-relaxed text-[#374151] md:text-xl">
+              Data scientist working on analytics, data engineering, visualization, and applied machine learning.
+            </p>
+          </div>
+
+          <p className="max-w-xl text-base leading-7 text-[#5b6472]">
+            Currently a Digital Engineering Intern at Johnson Controls in California. M.S. Data Science candidate at
+            Rochester Institute of Technology with experience across ETL pipelines, dashboards, research, and teaching.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <button onClick={scrollToProjects} className="portfolio-button-primary">
+              Selected projects
+            </button>
+            <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="portfolio-button-secondary">
+              Download resume
+            </a>
+            <a
+              href="https://github.com/aditireddy-d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 px-2 py-2 text-sm font-medium text-[#111827] hover:underline"
+            >
+              GitHub
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+
+        <div className="flex justify-center lg:justify-end">
+          <div className="overflow-hidden rounded-[1.75rem] bg-white p-3 shadow-[0_20px_60px_rgba(17,24,39,0.12)]">
+            <img
+              src={profilePhoto}
+              alt="Aditi Reddy Doma"
+              className="h-[28rem] w-[22rem] object-cover object-top"
+            />
           </div>
         </div>
       </div>
