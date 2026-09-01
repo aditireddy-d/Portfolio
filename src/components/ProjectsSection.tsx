@@ -27,7 +27,7 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       category: "Data Platform",
-      name: "Aethernet",
+      name: "E-commerce Data Pipeline",
       description:
         "A hybrid data and AI platform for AetherMart e-commerce, combining MariaDB Galera clusters, MongoDB, vector search, and real-time synchronization.",
       metrics: [
