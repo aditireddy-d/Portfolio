@@ -13,11 +13,6 @@ const HeroSection = () => {
     <section id="hero" className="portfolio-section pt-32 md:pt-36">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-8">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#5b6472]">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            Johnson Controls · Digital Engineering Intern
-          </div>
-
           <div className="space-y-4">
             <h1 className="portfolio-title">Aditi Reddy Doma</h1>
             <p className="max-w-xl text-lg font-medium leading-relaxed text-[#374151] md:text-xl">
@@ -26,8 +21,8 @@ const HeroSection = () => {
           </div>
 
           <p className="max-w-xl text-base leading-7 text-[#5b6472]">
-            Currently a Digital Engineering Intern at Johnson Controls in California. M.S. Data Science candidate at
-            Rochester Institute of Technology with experience across ETL pipelines, dashboards, research, and teaching.
+            M.S. Data Science candidate at Rochester Institute of Technology with experience across ETL pipelines,
+            dashboards, research, and teaching.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">

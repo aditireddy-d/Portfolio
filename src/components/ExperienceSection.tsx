@@ -81,18 +81,19 @@ const ExperienceSection = () => {
           <div className="mb-8 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="portfolio-label mb-3">01 · Experience</p>
-              <h2 className="portfolio-title max-w-3xl">Industry and research experience.</h2>
+              <h2 className="portfolio-title max-w-3xl">Experience.</h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-[#5b6472]">
-              Digital engineering at Johnson Controls, data science research at iCitizen, teaching at RIT, and earlier
-              work in analytics and machine learning.
+              Data science research, teaching, analytics, and machine learning across industry and academic settings.
             </p>
           </div>
         </div>
 
-        <div className="space-y-0">
+        <div className="relative border-l border-[#cfc7bd] pl-8 md:pl-10">
           {experiences.map((exp, index) => (
-            <article key={index} className="portfolio-divider py-10 first:border-t-0">
+            <article key={index} className={`relative ${index < experiences.length - 1 ? "pb-12" : ""}`}>
+              <span className="absolute -left-[calc(2rem+0.5px)] top-1 h-3 w-3 rounded-full border-2 border-[#111827] bg-[#f7f6f3] md:-left-[calc(2.5rem+0.5px)]" />
+
               <div className="grid gap-8 md:grid-cols-[220px_1fr]">
                 <div className="space-y-3">
                   <p className="portfolio-label text-[#6b7280]">{exp.label}</p>
@@ -100,7 +101,7 @@ const ExperienceSection = () => {
                   <p className="text-sm text-[#5b6472]">{exp.location}</p>
                 </div>
 
-                <div className="space-y-5">
+                <div className={`space-y-5 ${index < experiences.length - 1 ? "portfolio-divider pb-10" : ""}`}>
                   <div>
                     <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#6b7280]">{exp.company}</p>
                     <h3 className="mt-2 font-serif text-3xl text-[#111827]">{exp.title}</h3>
