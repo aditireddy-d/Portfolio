@@ -1,101 +1,42 @@
-import { Card, CardContent } from "@/components/ui/card";
-import githubLogo from "@/assets/github-logo.svg";
-import linkedinLogo from "@/assets/linkedin-logo.svg";
 import { getImagePath } from "@/utils/imagePath";
 
+const profilePhoto = getImagePath("/profile-photo.jpg");
+
+const aboutParagraphs = [
+  "I am currently a Master of Science in Data Science student at Rochester Institute of Technology, building skills across analytics, machine learning, data engineering, and visualization.",
+  "Before and during graduate school, I have worked as a Digital Engineering Intern at Johnson Controls, a Data Science Researcher at iCitizen, a Graduate Teaching Assistant at RIT, a Data Analyst at StandardWings Technologies, and a Machine Learning Intern at Cloud4C.",
+  "I received my undergraduate education from Mahindra University, where I studied Artificial Intelligence. My interest in data science grew through coursework and hands-on projects that showed me how raw information could be transformed into meaningful decisions.",
+  "I am interested in all things data, including machine learning, data engineering, business intelligence, dashboard design, and applied analytics across industry and research settings.",
+  "In my free time, I enjoy exploring new datasets, building visual stories from data, cooking, and staying curious about how technology can solve real-world problems.",
+];
+
 const AboutSection = () => {
-  const resumeUrl = getImagePath("/Resume_Aditi_Reddy_Doma.pdf");
-  
   return (
-    <section id="about" className="py-20 bg-black relative overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-            Giving silent data a voice
-          </p>
+    <section id="about" className="portfolio-section bg-white">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="portfolio-divider pb-10">
+          <p className="portfolio-label mb-3">About Me</p>
+          <h2 className="portfolio-title max-w-3xl">A little more about my background.</h2>
         </div>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-slate-900 rounded-xl p-8 shadow-sm border border-slate-800">
-            <div className="space-y-6">
-              <p className="text-lg text-slate-300 leading-relaxed">
-                I'm a Data Science graduate student at RIT with a Bachelor's in Artificial Intelligence and a deep curiosity for all things data.
-              </p>
-              <p className="text-lg text-slate-300 leading-relaxed">
-                Over the years, I've worked on projects and internships that let me explore the full data journey from data preprocessing and exploratory data analysis, to statistical modeling, machine learning, data visualization and ETL.
-              </p>
-              <p className="text-lg text-slate-300 leading-relaxed">
-                I specialize in turning complex, messy data into clear, actionable insights that drive business decisions. With expertise in Python, R, SQL, and a comprehensive stack of analytics tools, I transform data into strategic value.
-              </p>
-              <p className="text-lg text-slate-300 leading-relaxed font-medium">
-                Let's collaborate and turn raw data into real impact.
-              </p>
-            </div>
+
+        <div className="grid items-center gap-12 lg:grid-cols-[280px_1fr] lg:gap-16">
+          <div className="flex justify-center lg:justify-start">
+            <img
+              src={profilePhoto}
+              alt="Aditi Reddy Doma"
+              className="h-56 w-56 rounded-full object-cover object-top shadow-[0_12px_40px_rgba(17,24,39,0.12)] md:h-64 md:w-64"
+            />
           </div>
-          
-          {/* Contact information boxes */}
-          <div className="mt-12 max-w-6xl mx-auto">
-            <div className="space-y-6">
-              {/* First row - 2 boxes */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Phone box */}
-                <Card className="bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-800 text-center h-32 hover:shadow-md hover:border-slate-700 transition-all">
-                  <CardContent className="space-y-3 h-full flex flex-col justify-center p-0">
-                    <div className="text-2xl">📞</div>
-                    <div className="text-slate-300 text-sm font-medium">+1 (917) 337-7045</div>
-                  </CardContent>
-                </Card>
-                
-                {/* Email box */}
-                <Card className="bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-800 text-center h-32 hover:shadow-md hover:border-slate-700 transition-all">
-                  <CardContent className="space-y-2 h-full flex flex-col justify-center p-0">
-                    <div className="text-2xl">📧</div>
-                    <div className="space-y-1">
-                      <div className="text-slate-300 text-xs font-medium">ad7977@rit.edu</div>
-                      <div className="text-slate-300 text-xs font-medium">aditidoma@gmail.com</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-              
-              {/* Second row - 3 boxes */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* GitHub box */}
-                <Card className="bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-800 text-center hover:shadow-md hover:border-blue-500 transition-all cursor-pointer h-32">
-                  <a href="https://github.com/aditireddy-d" target="_blank" rel="noopener noreferrer" className="block h-full">
-                    <CardContent className="space-y-3 h-full flex flex-col justify-center p-0">
-                      <div className="flex justify-center">
-                        <img src={githubLogo} alt="GitHub" className="w-10 h-10" />
-                      </div>
-                      <div className="text-slate-300 text-sm font-medium">GitHub</div>
-                    </CardContent>
-                  </a>
-                </Card>
-                
-                {/* Resume box */}
-                <Card className="bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-800 text-center hover:shadow-md hover:border-blue-500 transition-all cursor-pointer h-32">
-                  <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="block h-full">
-                    <CardContent className="space-y-3 h-full flex flex-col justify-center p-0">
-                      <div className="text-2xl">📄</div>
-                      <div className="text-slate-300 text-sm font-medium">Resume</div>
-                    </CardContent>
-                  </a>
-                </Card>
-                
-                {/* LinkedIn box */}
-                <Card className="bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-800 text-center hover:shadow-md hover:border-blue-500 transition-all cursor-pointer h-32">
-                  <a href="https://www.linkedin.com/in/aditireddydoma/" target="_blank" rel="noopener noreferrer" className="block h-full">
-                    <CardContent className="space-y-3 h-full flex flex-col justify-center p-0">
-                      <div className="flex justify-center">
-                        <img src={linkedinLogo} alt="LinkedIn" className="w-10 h-10" />
-                      </div>
-                      <div className="text-slate-300 text-sm font-medium">LinkedIn</div>
-                    </CardContent>
-                  </a>
-                </Card>
-              </div>
-            </div>
+
+          <div className="space-y-8">
+            {aboutParagraphs.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="border-l-2 border-[#93c5fd] pl-5 text-sm leading-7 text-[#374151] md:text-base md:leading-8"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </div>
