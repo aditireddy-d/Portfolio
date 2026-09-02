@@ -101,6 +101,32 @@ const ProjectsSection = () => {
       tab: "data",
     },
     {
+      category: "Music Analytics",
+      name: "Rhythm Flow",
+      description:
+        "Music analytics platform integrating the Spotify API with Snowflake, Airflow, Kafka, PySpark, and Streamlit to collect, process, and visualize listening habits, playlists, and top tracks in real time.",
+      metrics: [
+        { value: "Real-time", label: "streaming pipeline" },
+        { value: "Snowflake", label: "data warehouse" },
+        { value: "Streamlit", label: "live app" },
+      ],
+      skills: ["Spotify API", "Snowflake", "Airflow", "Kafka", "PySpark", "Streamlit", "Tableau"],
+      image: getImagePath("/music-ai-project.png"),
+      githubUrl: "https://github.com/aditireddy-d/Spotify",
+      liveUrl: "https://rhythmflow.streamlit.app/",
+      problem: {
+        label: "Problem",
+        title: "What needed to change",
+        text: "Spotify listening data needed a scalable pipeline to move from real-time ingestion through orchestration and warehousing into interactive analytics and personalized music insights.",
+      },
+      system: {
+        label: "System",
+        title: "What I built",
+        text: "Rhythm Flow connects Spotify API ingestion with Kafka streaming, Airflow orchestration, Snowflake storage, PySpark processing, and a Streamlit interface for recommendations, AI playlists, and music trend analysis.",
+      },
+      tab: "data",
+    },
+    {
       category: "Energy Analytics",
       name: "Energy Consumption Predictor",
       description:
