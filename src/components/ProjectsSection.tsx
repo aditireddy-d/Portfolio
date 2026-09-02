@@ -51,6 +51,56 @@ const ProjectsSection = () => {
       tab: "data",
     },
     {
+      category: "Cloud Data Engineering",
+      name: "Azure Data Engineering",
+      description:
+        "End-to-end Azure data engineering pipeline migrating on-premises SQL Server to the cloud, with automated ingestion, transformation, analytics, and Power BI reporting.",
+      metrics: [
+        { value: "Azure", label: "cloud stack" },
+        { value: "4", label: "pipeline stages" },
+        { value: "Power BI", label: "reporting layer" },
+      ],
+      skills: ["Azure Data Factory", "Azure Databricks", "Synapse Analytics", "SQL Server", "Power BI", "Python"],
+      image: getImagePath("/azure-data-engineering.png"),
+      githubUrl: "https://github.com/aditireddy-d/Azure-Data-Engineering",
+      problem: {
+        label: "Problem",
+        title: "What needed to change",
+        text: "On-premises SQL Server data needed to be migrated to Azure with automated ingestion, transformation, and reporting workflows instead of manual, siloed data movement.",
+      },
+      system: {
+        label: "System",
+        title: "What I built",
+        text: "An Azure pipeline using Data Factory for ingestion into Data Lake, Databricks for transformation, Synapse Analytics for querying, and Power BI dashboards for business insights.",
+      },
+      tab: "data",
+    },
+    {
+      category: "AWS ETL Pipeline",
+      name: "ETL YouTube Analytics",
+      description:
+        "Built an end-to-end AWS ETL pipeline on YouTube data using EC2, Glue, Lambda, Athena, and S3 to extract, transform, load, and analyze channel analytics.",
+      metrics: [
+        { value: "AWS", label: "cloud services" },
+        { value: "ETL", label: "full pipeline" },
+        { value: "YouTube", label: "data source" },
+      ],
+      skills: ["AWS", "Python", "SQL", "AWS Glue", "Lambda", "Athena", "S3"],
+      image: getImagePath("/youtube-etl-project.png"),
+      githubUrl: "https://github.com/aditireddy-d/ETL-Youtube-Analytics",
+      problem: {
+        label: "Problem",
+        title: "What needed to change",
+        text: "YouTube analytics data needed a scalable cloud pipeline to move from raw extraction through transformation and loading into a queryable analytics layer for visualization.",
+      },
+      system: {
+        label: "System",
+        title: "What I built",
+        text: "An AWS-based ETL workflow using S3 storage, Glue and Lambda processing, Athena querying, and Python automation to deliver analysis-ready YouTube datasets.",
+      },
+      tab: "data",
+    },
+    {
       category: "Energy Analytics",
       name: "Energy Consumption Predictor",
       description:
