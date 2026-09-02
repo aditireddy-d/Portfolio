@@ -11,8 +11,7 @@ const AboutSection = () => {
     <section id="about" className="portfolio-section bg-white">
       <div className="mx-auto max-w-6xl px-6">
         <div className="portfolio-divider pb-10">
-          <p className="portfolio-label mb-3">About Me</p>
-          <h2 className="portfolio-title max-w-3xl">A little more about my background.</h2>
+          <p className="portfolio-label">About Me</p>
         </div>
 
         <div className="max-w-3xl space-y-8">
