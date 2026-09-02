@@ -1,8 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
 import { getImagePath } from "@/utils/imagePath";
 
-const profilePhoto = getImagePath("/profile-photo.jpg");
 const resumeUrl = getImagePath("/Resume_Aditi_Reddy_Doma.pdf");
+
+const targetRoles = [
+  "AI Engineer",
+  "Machine Learning Engineer",
+  "Data Scientist",
+  "Data Analyst",
+  "Data Engineer",
+];
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -11,21 +18,30 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="portfolio-section pt-32 md:pt-36">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="mx-auto max-w-4xl px-6">
         <div className="space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-5">
             <h1 className="portfolio-title">Aditi Reddy Doma</h1>
-            <p className="max-w-xl text-lg font-medium leading-relaxed text-[#374151] md:text-xl">
-              Data scientist working on analytics, data engineering, visualization, and applied machine learning.
+            <p className="max-w-3xl text-xl font-medium leading-relaxed text-[#374151] md:text-2xl">
+              Turning messy data into models, pipelines, and decisions that actually move the business forward.
             </p>
           </div>
 
-          <p className="max-w-xl text-base leading-7 text-[#5b6472]">
-            M.S. Data Science candidate at Rochester Institute of Technology with experience across ETL pipelines,
-            dashboards, research, and teaching.
+          <p className="max-w-3xl text-base leading-7 text-[#5b6472] md:text-lg md:leading-8">
+            M.S. Data Science candidate at RIT with hands-on experience across ETL, analytics, ML, dashboards, and
+            research. Open to roles where I can build intelligent systems, ship reliable data products, and deliver
+            insights teams can act on.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap gap-2">
+            {targetRoles.map((role) => (
+              <span key={role} className="portfolio-tag px-4 py-2 text-sm">
+                {role}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 pt-2">
             <button onClick={scrollToProjects} className="portfolio-button-primary">
               Selected projects
             </button>
@@ -41,16 +57,6 @@ const HeroSection = () => {
               GitHub
               <ArrowUpRight className="h-4 w-4" />
             </a>
-          </div>
-        </div>
-
-        <div className="flex justify-center lg:justify-end">
-          <div className="overflow-hidden rounded-[1.75rem] bg-white p-3 shadow-[0_20px_60px_rgba(17,24,39,0.12)]">
-            <img
-              src={profilePhoto}
-              alt="Aditi Reddy Doma"
-              className="h-[28rem] w-[22rem] object-cover object-top"
-            />
           </div>
         </div>
       </div>
