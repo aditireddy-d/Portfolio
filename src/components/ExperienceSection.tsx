@@ -1,76 +1,85 @@
 import { getImagePath } from "@/utils/imagePath";
 
+type Experience = {
+  label?: string;
+  title: string;
+  company: string;
+  period: string;
+  location: string;
+  logo: string;
+  achievements: string[];
+};
+
 const ExperienceSection = () => {
-  const experiences = [
+  const experiences: Experience[] = [
     {
       label: "Current role",
-      title: "Digital Engineering Intern",
+      title: "Artificial Intelligence Engineer Intern",
       company: "Johnson Controls",
-      period: "Jun 2026 – Present",
-      location: "California",
-      summary:
-        "Building chiller reliability monitoring workflows with Microsoft Fabric, Snowflake, and Tableau for cross-functional engineering teams.",
+      period: "August 2026 – Present",
+      location: "Sunnyvale, California",
+      logo: getImagePath("/johnson-controls-logo.png"),
       achievements: [
-        "Partnering with maintenance, quality, and engineering teams to gather requirements and define key performance indicators (KPIs) for chiller (industrial HVAC) reliability monitoring.",
-        "Extracting chiller sensor data from Microsoft Fabric using KQL and Python into Snowflake via ETL workflows for centralized data.",
-        "Developing initial Tableau dashboards to translate raw sensor readings into insights for cross-functional teams.",
+        "Developing the Control Spec Assistant, an AI agent using hybrid RAG (BGE-large + BM25, Qdrant) and GPT-5.1 to deliver instant, cited spec answers, targeting 157 hrs/week that 18 controls engineers spend manually searching documents.",
+        "Architecting Agent Q, an agentic AI chatbot that converts engineers' natural-language questions into SQL over the Snowflake chiller sensor database, delivering instant performance insights without writing code, accelerated with Claude Code.",
       ],
-      technologies: ["Microsoft Fabric", "KQL", "Python", "Snowflake", "ETL", "Tableau", "KPI Development"],
     },
     {
-      label: "Research",
-      title: "Data Science Researcher",
+      title: "Data Engineering Intern",
+      company: "Johnson Controls",
+      period: "June 2026 – August 2026",
+      location: "York, Pennsylvania",
+      logo: getImagePath("/johnson-controls-logo.png"),
+      achievements: [
+        "Built an ETL pipeline from Microsoft Fabric to Snowflake using KQL and Python, centralizing 17M+ chiller sensor records.",
+        "Defined 15+ equipment health KPIs and built Tableau dashboards for cross-functional teams to monitor equipment reliability.",
+        "Won the Johnson Controls Summer Innovation Challenge among 150+ North American interns with an AI-powered Predictive Sales Optimization Engine recommending bid strategies from historical win/loss data.",
+      ],
+    },
+    {
+      title: "Data Science Research Assistant",
       company: "iCitizen",
-      period: "May 2025 – Apr 2026",
+      period: "May 2025 – Present",
       location: "Rochester, New York",
-      summary:
-        "Built congressional data pipelines, interactive visualizations, and a RAG-based LLM chatbot for political affairs.",
+      logo: getImagePath("/icitizen-logo.png"),
       achievements: [
         "Web scraped and analyzed 500K+ unstructured congressional profiles from Congress.gov and Bioguide websites using APIs, transforming unstructured data into structured datasets stored in AWS DynamoDB for real-time updates.",
         "Designed a dynamic U.S. map using D3.js, visualizing senators, their sponsored bills and co-sponsors by state.",
-        "Increased user engagement by 27.2% on the iCitizen app by building a RAG-based LLM chatbot for political affairs.",
+        "Increased user engagement by 27.2% on the iCitizen app by building a GraphRAG chatbot on Neo4j, reducing hallucinations.",
       ],
-      technologies: ["AWS", "DynamoDB", "D3.js", "Web Scraping", "RAG", "LLM", "Data Visualization"],
     },
     {
-      label: "Teaching",
       title: "Graduate Teaching Assistant",
       company: "Rochester Institute of Technology",
       period: "May 2025 – May 2026",
       location: "Rochester, New York",
-      summary: "Supported database systems instruction for undergraduates through SQL labs and relational data modeling.",
+      logo: getImagePath("/rit-logo.png"),
       achievements: [
         "Guided 200 undergraduates in database systems and SQL through labs focused on query writing and relational data modeling.",
       ],
-      technologies: ["SQL", "Database Systems", "Teaching", "Data Modeling"],
     },
     {
-      label: "Industry",
       title: "Data Analyst",
       company: "StandardWings Technologies Pvt. Ltd.",
-      period: "Aug 2023 – Aug 2024",
+      period: "August 2023 – August 2024",
       location: "Nashik, India",
-      summary:
-        "Integrated multi-source fleet data into AWS S3 and built Power BI dashboards that uncovered operational cost savings.",
+      logo: getImagePath("/standardwings-logo.png"),
       achievements: [
-        "Extracted, cleaned and integrated multi-source data (GPS, sensor, Salesforce CRM, SAP, Excel) from 120+ vehicles into AWS S3 using SQL and Python, enabling detailed fleet analysis in Power BI that uncovered significant operational cost savings.",
+        "Extracted, cleaned and integrated multi-source data (GPS, sensor, Salesforce CRM, SAP, Excel) from 120+ vehicles into AWS S3 using SQL and Python, enabling Power BI fleet analysis that identified 37% fuel cost reduction opportunities.",
         "Collaborated with cross-functional teams throughout the project lifecycle to define 21 key KPIs aligned with business objectives.",
       ],
-      technologies: ["AWS S3", "SQL", "Python", "Power BI", "Salesforce", "SAP", "Excel", "Fleet Analytics"],
     },
     {
-      label: "Internship",
       title: "Machine Learning Intern",
       company: "Cloud4C",
-      period: "Jun 2023 – Jul 2023",
+      period: "June 2023 – July 2023",
       location: "Hyderabad, India",
-      summary: "Built NLP models for customer feedback analysis using BERT, Databricks, and PySpark.",
+      logo: getImagePath("/cloud4c-logo.png"),
       achievements: [
         "Achieved over 90% accuracy in a sentiment analysis model using BERT to analyze customer feedback.",
         "Performed large-scale text analysis on customer feedback using Databricks with PySpark for data processing.",
         "Identified top 5 recurring customer concerns using unsupervised learning (K-Means clustering) on BERT embeddings.",
       ],
-      technologies: ["BERT", "Databricks", "PySpark", "NLP", "K-Means Clustering", "Sentiment Analysis"],
     },
   ];
 
@@ -84,7 +93,7 @@ const ExperienceSection = () => {
               <h2 className="portfolio-title max-w-3xl">Experience.</h2>
             </div>
             <p className="max-w-md text-sm leading-6 text-[#5b6472]">
-              Data science research, teaching, analytics, and machine learning across industry and academic settings.
+              Data engineering, machine learning, AI, and visualization across industry and research settings.
             </p>
           </div>
         </div>
@@ -96,16 +105,30 @@ const ExperienceSection = () => {
 
               <div className="grid gap-8 md:grid-cols-[220px_1fr]">
                 <div className="space-y-3">
-                  <p className="portfolio-label text-[#6b7280]">{exp.label}</p>
+                  {exp.label && <p className="portfolio-label text-[#6b7280]">{exp.label}</p>}
                   <p className="text-sm font-medium text-[#111827]">{exp.period}</p>
                   <p className="text-sm text-[#5b6472]">{exp.location}</p>
                 </div>
 
-                <div className={`space-y-5 ${index < experiences.length - 1 ? "portfolio-divider pb-10" : ""}`}>
-                  <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#6b7280]">{exp.company}</p>
-                    <h3 className="mt-2 font-serif text-3xl text-[#111827]">{exp.title}</h3>
-                    <p className="mt-3 max-w-3xl text-sm leading-7 text-[#4b5563]">{exp.summary}</p>
+                <div className={`space-y-5 ${index < experiences.length - 1 ? "pb-10" : ""}`}>
+                  <div className="flex items-start gap-5">
+                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#e7e2db] bg-white p-2 shadow-sm">
+                      <img
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        className="h-full w-full object-contain"
+                        onError={(e) => {
+                          e.currentTarget.src = getImagePath("/placeholder.svg");
+                        }}
+                      />
+                    </div>
+
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#6b7280]">
+                        {exp.company}
+                      </p>
+                      <h3 className="mt-2 font-serif text-2xl text-[#111827] md:text-3xl">{exp.title}</h3>
+                    </div>
                   </div>
 
                   <ul className="space-y-3">
@@ -116,14 +139,6 @@ const ExperienceSection = () => {
                       </li>
                     ))}
                   </ul>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <span key={tech} className="portfolio-tag">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </article>

@@ -16,14 +16,14 @@ const HeroSection = () => {
           <div className="space-y-5">
             <h1 className="portfolio-title">Aditi Reddy Doma</h1>
             <p className="max-w-xl text-lg font-medium leading-relaxed text-[#374151] md:text-xl">
-              I turn complex data into clear stories, smart models, and products people actually use.
+              I am an M.S. Data Science student at RIT, interning at Johnson Controls, and open to full-time roles.
             </p>
           </div>
 
           <p className="max-w-xl text-base leading-7 text-[#5b6472]">
-            M.S. Data Science student at Rochester Institute of Technology with experience across analytics, machine
-            learning, data engineering, dashboards, and research. I love building work that is thoughtful, practical,
-            and ready for the real world.
+            I turn messy data into ETL pipelines, machine learning models, AI applications, and interactive dashboards
+            across industry and research, from Snowflake analytics and RAG chatbots to computer vision and cloud data
+            platforms.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">

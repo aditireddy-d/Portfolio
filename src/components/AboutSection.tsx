@@ -1,6 +1,6 @@
 const aboutParagraphs = [
   "I am currently a Master of Science in Data Science student at Rochester Institute of Technology, building skills across analytics, machine learning, data engineering, and visualization.",
-  "Before and during graduate school, I have worked as a Digital Engineering Intern at Johnson Controls, a Data Science Researcher at iCitizen, a Graduate Teaching Assistant at RIT, a Data Analyst at StandardWings Technologies, and a Machine Learning Intern at Cloud4C.",
+  "Before and during graduate school, I have worked as an Artificial Intelligence Engineer Intern and Data Engineering Intern at Johnson Controls, a Data Science Research Assistant at iCitizen, a Graduate Teaching Assistant at RIT, a Data Analyst at StandardWings Technologies, and a Machine Learning Intern at Cloud4C.",
   "I received my undergraduate education from Mahindra University, where I studied Artificial Intelligence. My interest in data science grew through coursework and hands-on projects that showed me how raw information could be transformed into meaningful decisions.",
   "I am interested in all things data, including machine learning, data engineering, business intelligence, dashboard design, and applied analytics across industry and research settings.",
   "In my free time, I enjoy exploring new datasets, building visual stories from data, cooking, and staying curious about how technology can solve real-world problems.",

@@ -32,20 +32,28 @@ const EducationSection = () => {
 
   const toolkit = [
     {
-      category: "Analytics & engineering",
-      items: "Python, SQL, R, ETL, AWS, Snowflake, Microsoft Fabric, MongoDB, MariaDB",
+      category: "Programming languages",
+      items: "Python, Java, R, SQL",
     },
     {
-      category: "Machine learning",
-      items: "PyTorch, TensorFlow, scikit-learn, BERT, NLP, computer vision, clustering",
+      category: "Cloud platforms",
+      items: "AWS, Azure, Snowflake, Databricks, Kafka, Microsoft Fabric",
     },
     {
-      category: "Visualization & BI",
-      items: "Tableau, Power BI, Looker, D3.js, dashboard design, KPI reporting",
+      category: "Data engineering",
+      items: "ETL, CDC, Data Pipelines, Apache Airflow, PySpark, SQL/NoSQL Databases",
     },
     {
-      category: "Tools & platforms",
-      items: "Git, Databricks, PySpark, Kafka, Excel, Jupyter, API development",
+      category: "BI & analytics",
+      items: "Tableau, Power BI, Looker, Google Analytics, Streamlit",
+    },
+    {
+      category: "ML & AI",
+      items: "TensorFlow, PyTorch, Scikit-Learn, BERT, LLMs, RAG, HuggingFace, CLIP, FAISS, YOLOv8, MediaPipe, OpenCV",
+    },
+    {
+      category: "Tools & technologies",
+      items: "Git, KQL, Docker, Jupyter",
     },
   ];
 
