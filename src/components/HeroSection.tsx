@@ -16,14 +16,15 @@ const HeroSection = () => {
           <div className="space-y-5">
             <h1 className="portfolio-title">Aditi Reddy Doma</h1>
             <p className="max-w-xl text-lg font-medium leading-relaxed text-[#374151] md:text-xl">
-              I am an M.S. Data Science student at RIT, interning at Johnson Controls, and open to full-time roles.
+              I&apos;m an AI Engineer building AI agents at Johnson Controls, finishing my M.S. in Data Science at RIT
+              (Dec 2026), and open to full-time roles.
             </p>
           </div>
 
           <p className="max-w-xl text-base leading-7 text-[#5b6472]">
-            I turn messy data into ETL pipelines, machine learning models, AI applications, and interactive dashboards
-            across industry and research, from Snowflake analytics and RAG chatbots to computer vision and cloud data
-            platforms.
+            I build ETL pipelines and data analysis projects that turn raw data into insights. Currently, as an AI
+            Engineer at Johnson Controls, I build AI systems end to end, from the data pipelines underneath to the LLM
+            applications on top. I also won Johnson Controls&apos; company-wide innovation challenge among 150+ interns.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
